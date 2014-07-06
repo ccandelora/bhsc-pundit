@@ -16,6 +16,36 @@ ActiveRecord::Schema.define(version: 20140528022147) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "reservation_weeks", force: true do |t|
+    t.text     "note"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.date     "res_date"
+  end
+
+  create_table "reservations", force: true do |t|
+    t.string   "name"
+    t.boolean  "wed"
+    t.boolean  "thur"
+    t.boolean  "fri"
+    t.boolean  "sat"
+    t.boolean  "sun"
+    t.boolean  "mon"
+    t.boolean  "tue"
+    t.boolean  "dinner"
+    t.text     "comment"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "reservation_week_id"
+    t.string   "sex"
+    t.string   "res_member_type"
+    t.date     "reservation_date"
+  end
+
+  add_index "reservations", ["reservation_week_id"], name: "index_reservations_on_reservation_week_id", using: :btree
+  add_index "reservations", ["user_id"], name: "index_reservations_on_user_id", using: :btree
+
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
