@@ -11,4 +11,16 @@ Rails.application.routes.draw do
     get 'pick', on: :collection
     post 'lookup', on: :collection
   end
+
+  resources :pages
+
+  get 'contact' => 'pages#contact'
+  get 'guest' => 'pages#guest'
+  get 'library' => 'pages#library'
+  get 'membership' => 'pages#membership'
+  get 'notes' =>  'pages#note'
+  get 'race' => 'pages#race'
+  get 'social'=> 'pages#social'
+  get 'pages' => 'pages#index'
+
 end
