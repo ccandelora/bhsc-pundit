@@ -12,7 +12,6 @@
     var defaults = { width: 10000,  height: 10000, bgID: 'bgimg' };
     var options = $.extend({}, defaults, options);
     $(document).ready(function() {
-       debugger;
        $(options.bgID).fullscreenrResizer(options); });
     $(window).bind("resize", function() { $(options.bgID).fullscreenrResizer(options); });
     return this;

@@ -6,6 +6,9 @@
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Bhsc Pundit'}"}
     = stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    :javascript
+      var FullscreenrOptions = {  width: 1024, height: 683, bgID: '#bgimg' };
+      jQuery.fn.fullscreenr(FullscreenrOptions);
     = csrf_meta_tags
   %body
     <!-- This is the background image -->
