@@ -8,8 +8,11 @@
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   %body
-    %header
-      = render 'layouts/navigation'
-    %main{:role => "main"}
-      = render 'layouts/messages'
-      = yield
+    <!-- This is the background image -->
+    = image_tag 'mt_wash_from_bwoods.jpg', height: '1024', width: '1683', id: 'bgimg'
+    %div#realBody>
+      %header
+        = render 'layouts/navigation'
+      %main{:role => "main"}
+        = render 'layouts/messages'
+        = yield
