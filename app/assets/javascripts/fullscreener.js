@@ -9,9 +9,11 @@
     if(options.height === undefined) alert('Please supply the background image height, default values will now be used. These may be very inaccurate.');
     if(options.width === undefined) alert('Please supply the background image width, default values will now be used. These may be very inaccurate.');
     if(options.bgID === undefined) alert('Please supply the background image ID, default #bgimg will now be used.');
-    var defaults = { width: 1024,  height: 1683, bgID: 'bgimg' };
+    var defaults = { width: 10000,  height: 10000, bgID: 'bgimg' };
     var options = $.extend({}, defaults, options);
-    $(document).ready(function() { $(options.bgID).fullscreenrResizer(options); });
+    $(document).ready(function() {
+       debugger;
+       $(options.bgID).fullscreenrResizer(options); });
     $(window).bind("resize", function() { $(options.bgID).fullscreenrResizer(options); });
     return this;
   };

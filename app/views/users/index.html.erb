@@ -1,16 +1,21 @@
-<div class="container">
-  <div class="row">
+<div class="box panel panel-default">
+  <div class="panel panel-body">
     <h3>Users</h3>
-    <div class="column">
-      <table class="table">
-        <tbody>
-          <% @users.each do |user| %>
-            <tr>
-              <%= render user %>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
+    <div class="action">
+      <div class="row">
+
+        <div class="column">
+          <table class="table">
+            <tbody>
+              <% @users.each do |user| %>
+                <tr>
+                  <%= render user %>
+                </tr>
+              <% end %>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
   </div>
 </div>
