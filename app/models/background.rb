@@ -6,8 +6,8 @@ class Background < OpenStruct
 
   def initialize(*args)
     super
-    self.slug = ActiveSupport::StringInquirer.new(self.slug.to_s)
-    self.class.delegate "#{self.slug}?", to: :slug
+    #self.slug = ActiveSupport::StringInquirer.new(self.slug.to_s)
+    #self.class.delegate "#{self.slug}?", to: :slug
   end
 
   def self.find(slug)
