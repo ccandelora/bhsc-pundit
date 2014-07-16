@@ -41,3 +41,4 @@ group :test do
   gem 'selenium-webdriver'
   gem 'foreman'
 end
+gem 'rails_12factor', group: :production
