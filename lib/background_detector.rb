@@ -8,8 +8,10 @@ class BackgroundsDetector
   private
 
   def detect
-    Backgrooung.all.detect { |background|
-      background.slug.include?(@request_background)
+    Background.all.detect { |background|
+      binding.pry
+      background.bg.order("RAND()").first
+      #background.slug.include?(@request_background)
     }
   end
 end

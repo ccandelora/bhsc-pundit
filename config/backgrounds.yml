@@ -1,16 +1,40 @@
 ---
 -
-  bg: cio
-    - 'bretts.jgp'
-    - 'fronthouse.jpg'
-    - 'hike_2.jpeg'
-    - 'mt_wash_from_bwoods.jpg'
-    - 'hike.jpeg'
-    - 'house.jpeg'
-    - 'mt_washington.jpg'
-    - 'summit_sign'
-    - 'tubing.jpg'
-    - 'tucks_2.jpeg'
-    - 'tucks_3.jpg'
-    - 'tucks.jpg'
-    - 'ullr.jpeg'
+  id: 1
+  photo: 'bretts.jgp'
+-
+  id: 2
+  photo: 'fronthouse.jpg'
+-
+  id: 3
+  photo: 'hike_2.jpeg'
+-
+  id: 4
+  photo: 'mt_wash_from_bwoods.jpg'
+-
+  id: 5
+  photo: 'hike.jpeg'
+-
+  id: 6
+  photo: 'house.jpeg'
+-
+  id: 7
+  photo: 'mt_washington.jpg'
+-
+  id: 8
+  photo: 'summit_sign'
+-
+  id: 9
+  photo: 'tubing.jpg'
+-
+  id: 10
+  photo: 'tucks_2.jpeg'
+-
+  id: 11
+  photo: 'tucks_3.jpg'
+-
+  id: 12
+  photo: 'tucks.jpg'
+-
+  id: 13
+  photo: 'ullr.jpeg'

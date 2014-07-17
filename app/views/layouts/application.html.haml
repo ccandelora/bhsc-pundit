@@ -12,10 +12,11 @@
     = csrf_meta_tags
   %body
     <!-- This is the background image -->
-    = image_tag 'mt_wash_from_bwoods.jpg', id: 'bgimg', height: '3072', width: '3072'
-    %div#realBody>
+    = image_tag randomized_background_image, id: 'bgimg', height: '3072', width: '3072'
+    %div
       %header
         = render 'layouts/navigation'
-      %main{:role => "main"}
-        = render 'layouts/messages'
-        = yield
+      %div
+        %main{:role => "main"}
+          = render 'layouts/messages'
+          = yield
