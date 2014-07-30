@@ -1,7 +1,18 @@
 <%# add navigation links to this file %>
+
+<li><%= link_to 'Home', root_path, class: 'navbar-brand' %></li>
+<li><%= link_to 'Membership', membership_path %> </li>
+<li> <%= link_to 'Guest', guest_path%> </li>
+<li> <%= link_to 'Social', social_path %></li>
+<li> <%= link_to 'Race', race_path %></li>
+<li> <%= link_to 'Contact Us', contact_path %></li>
+
 <% if user_signed_in? %>
   <li><%= link_to 'Edit account', edit_user_registration_path %></li>
   <li><%= link_to 'Sign out', destroy_user_session_path, :method=>'delete' %></li>
+  <li> <%= link_to 'Notes', notes_path %></li>
+  <li> <%= link_to 'Library', library_path %></li>
+  <li> <%= link_to 'Reservations', reservations_path %></li>
 <% else %>
   <li><%= link_to 'Sign in', new_user_session_path %></li>
   <li><%= link_to 'Sign up', new_user_registration_path %></li>
