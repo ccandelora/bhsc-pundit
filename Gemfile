@@ -20,6 +20,8 @@ gem 'pundit'
 gem 'simple_form'
 gem 'will_paginate', '~> 3.0'
 gem 'will_paginate-bootstrap'
+gem 'paperclip', '~> 3.0'
+gem 'aws-sdk', '~> 1.50.0'
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller', :platforms=>[:mri_21]

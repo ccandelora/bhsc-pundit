@@ -23,4 +23,5 @@ Rails.application.routes.draw do
   get 'social'=> 'pages#social'
   get 'pages' => 'pages#index'
 
+  resources :public_pins
 end

@@ -11,6 +11,7 @@ class PagesController < ApplicationController
   end
 
   def guest
+     @page = Page.find(4)
   end
 
   def library
@@ -54,8 +55,10 @@ class PagesController < ApplicationController
 
   # PATCH/PUT /pages/1
   def update
+    @page = Page.find(params[:id])
+    @pages = Page.all
     if @page.update(page_params)
-      redirect_to @page, notice: 'Page was successfully updated.'
+      redirect_to @pages, notice: 'Page was successfully updated.'
     else
       render action: 'edit'
     end
