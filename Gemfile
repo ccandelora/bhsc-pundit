@@ -43,4 +43,8 @@ group :test do
   gem 'selenium-webdriver'
   gem 'foreman'
 end
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+  gem 'unicorn', '~> 4.7.0'
+  gem 'unicorn-worker-killer', '~> 0.4.0'
+end
