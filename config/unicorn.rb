@@ -1,5 +1,5 @@
-worker_processes Integer(ENV['UNICORN_CONCURRENCY'] || 3)
-timeout 30
+worker_processes Integer(ENV["WEB_CONCURRENCY"] || 3)
+timeout 15
 preload_app true
 
 before_fork do |server, worker|
@@ -8,10 +8,8 @@ before_fork do |server, worker|
     Process.kill 'QUIT', Process.pid
   end
 
-  if defined?(ActiveRecord::Base)
+  defined?(ActiveRecord::Base) and
     ActiveRecord::Base.connection.disconnect!
-  end
-
 end
 
 after_fork do |server, worker|
@@ -19,13 +17,6 @@ after_fork do |server, worker|
     puts 'Unicorn worker intercepting TERM and doing nothing. Wait for master to send QUIT'
   end
 
-  reaping_frequency = ENV['DB_REAP_FREQ'] || 10 # seconds
-  pool = ENV['DB_POOL'] || 16
-
-  if defined?(ActiveRecord::Base)
-    config = Rails.application.config.database_configuration[Rails.env]
-    config['reaping_frequency'] = reaping_frequency
-    config['pool'] = pool
-    ActiveRecord::Base.establish_connection(config)
-  end
+  defined?(ActiveRecord::Base) and
+    ActiveRecord::Base.establish_connection
 end
