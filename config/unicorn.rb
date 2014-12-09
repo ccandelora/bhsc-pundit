@@ -29,8 +29,4 @@ after_fork do |server, worker|
     config['pool'] = pool
     ActiveRecord::Base.establish_connection(config)
   end
-
-  if defined?(Sherpa::Base) && database_url = Rails.application.config.treasure_database_url
-    Sherpa::Base.establish_connection("#{database_url}?pool=#{pool}&reaping_frequency=#{reaping_frequency}")
-  end
 end
