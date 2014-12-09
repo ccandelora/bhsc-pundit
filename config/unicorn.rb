@@ -10,7 +10,6 @@ before_fork do |server, worker|
 
   if defined?(ActiveRecord::Base)
     ActiveRecord::Base.connection.disconnect!
-    Sherpa::Base.connection.disconnect!
   end
 
 end
