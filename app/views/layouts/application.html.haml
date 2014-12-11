@@ -5,18 +5,15 @@
     %title= content_for?(:title) ? yield(:title) : 'Bhsc Pundit'
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Bhsc Pundit'}"}
     = stylesheet_link_tag 'application', media: 'all'
-    = javascript_include_tag 'application'
-    :javascript
-      var FullscreenrOptions = {  width: 1024, height: 683, bgID: '#bgimg' };
-      jQuery.fn.fullscreenr(FullscreenrOptions);
-    = csrf_meta_tags
-  %body
-    <!-- This is the background image -->
-    = image_tag randomized_background_image, id: 'bgimg', height: '3072', width: '3072'
-    %div
-      %header
+    %link{rel: 'stylesheet', type: 'text/css', href: 'http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css'}
+    %link{rel: 'stylesheet', type: 'text/css', href: 'http://fonts.googleapis.com/css?family=Raleway:400,200,300,100,500,600,700,800,900'}
+    %link{rel: 'stylesheet', type: 'text/css', href: 'http://fonts.googleapis.com/css?family=Playball'}
+  %body.bg-pattern1{data: {spy: 'scroll', target: '.navbar'}}
+    .preloader
+    #page-top.page-wrapper
+      .header-wrapper
         = render 'layouts/navigation'
-      #realBody
-        %main{:role => "main"}
-          = render 'layouts/messages'
-          = yield
+
+
+      = yield
+    = javascript_include_tag 'application'

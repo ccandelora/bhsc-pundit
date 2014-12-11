@@ -1,58 +1,58 @@
-class PinsController < ApplicationController
+class PublicPinsController < ApplicationController
   before_action :authenticate_user!, except: [:index, :show]
   before_action :correct_user, only: [:edit, :update, :destroy]
   before_action :set_pin, only: [:show, :edit, :update, :destroy]
 
 
   def index
-    @pins = Pin.all.order('created_at DESC').paginate(page: params[:page], per_page: 10)
+    @public_pins = PublicPin.all.order('created_at DESC').paginate(page: params[:page], per_page: 10)
   end
 
   def show
   end
 
   def new
-    @pin = current_user.pins.build
+    @public_pin = current_user.public_pins.build
   end
 
   def edit
   end
 
   def create
-    @pin = current_user.pins.build(pin_params)
-    if @pin.save
-      redirect_to @pin, notice: 'Pin was successfully created.'
+    @public_pin = current_user.public_pins.build(public_pin_params)
+    if @public_pin.save
+      redirect_to @public_pin, notice: 'Public Pin was successfully created.'
     else
       render action: 'new'
     end
   end
 
   def update
-    if @pin.update(pin_params)
-      redirect_to @pin, notice: 'Pin was successfully updated.'
+    if @public_pin.update(public_pin_params)
+      redirect_to @public_pin, notice: 'Public Pin was successfully updated.'
     else
       render action: 'edit'
     end
   end
 
   def destroy
-    @pin.destroy
-    redirect_to pins_url
+    @public_pin.destroy
+    redirect_to public_pins_url
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_pin
-      @pin = Pin.find(params[:id])
+    def set_public_pin
+      @public_pin = PublicPin.find(params[:id])
     end
 
     def correct_user
-      @pin = current_user.pins.find_by(id: params[:id])
-      redirect_to pins_path, notice: 'Not authorized to edit this pin' if @pin.nil?
+      @public_pin = current_user.public_pins.find_by(id: params[:id])
+      redirect_to public_pins_path, notice: 'Not authorized to edit this pin' if @public_pin.nil?
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
-    def pin_params
-      params.require(:pin).permit(:description, :image)
+    def public_pin_params
+      params.require(:public_pin).permit(:description, :image)
     end
 end
