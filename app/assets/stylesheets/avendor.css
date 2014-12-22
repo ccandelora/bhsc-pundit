@@ -418,34 +418,36 @@ h5.fancy-title , h6.fancy-title { margin-bottom:20px !important;}
     -o-background-size: cover !important;      /* Opera*/
     background-size: cover !important;         /* Generic*/  }
 
-.parallax-background1 {background-image:url(../img/demo/parallax/parallax-back1.jpg);}
-.parallax-background2{ background-image:url(../img/demo/parallax/parallax-back2.jpg);}
-.parallax-background3{ background-image:url(../img/demo/parallax/parallax-back3.jpg);}
-.parallax-background4{ background-image:url(../img/demo/parallax/parallax-back4.jpg);}
-.parallax-background5{ background-image:url(../img/demo/parallax/parallax-back5.jpg);}
-.parallax-background6{ background-image:url(../img/demo/parallax/parallax-back6.jpg);}
-.parallax-background7{ background-image:url(../img/demo/parallax/parallax-back7.jpg);}
-.parallax-background8{ background-image:url(../img/demo/parallax/parallax-back8.jpg);}
-.parallax-background9{ background-image:url(../img/demo/parallax/parallax-back9.jpg);}
-.parallax-background10{ background-image:url(../img/demo/parallax/parallax-back10.jpg);}
-.parallax-background11{ background-image:url(../img/demo/parallax/parallax-back11.jpg);}
-.parallax-background12{ background-image:url(../img/demo/parallax/parallax-back12.jpg);}
-.parallax-background13{ background-image:url(../img/demo/parallax/parallax-back13.jpg);}
-.parallax-background14{ background-image:url(../img/demo/parallax/parallax-back14.jpg);}
-.parallax-background15{ background-image:url(../img/demo/parallax/parallax-back15.jpg);}
-.parallax-background16{ background-image:url(../img/demo/parallax/parallax-back16.jpg);}
+.parallax-background1 {background-image:url(/assets/parallax/parallax-back1.jpg);}
+.parallax-background2{ background-image:url(/assets/parallax/parallax-back2.jpg);}
+.parallax-background3{ background-image:url(/assets/parallax/parallax-back3.jpg);}
+.parallax-background4{ background-image:url(/assets/parallax/parallax-back4.jpg);}
+.parallax-background5{ background-image:url(/assets/parallax/parallax-back5.jpg);}
+.parallax-background6{ background-image:url(/assets/parallax/parallax-back6.jpg);}
+.parallax-background7{ background-image:url(/assets/parallax/parallax-back7.jpg);}
+.parallax-background8{ background-image:url(/assets/parallax/parallax-back8.jpg);}
+.parallax-background9{ background-image:url(/assets/parallax/parallax-back9.jpg);}
+.parallax-background10{ background-image:url(/assets/parallax/parallax-back10.jpg);}
+.parallax-background11{ background-image:url(/assets/parallax/parallax-back11.jpg);}
+.parallax-background12{ background-image:url(/assets/parallax/parallax-back12.jpg);}
+.parallax-background13{ background-image:url(/assets/parallax/parallax-back13.jpg);}
+.parallax-background14{ background-image:url(/assets/parallax/parallax-back14.jpg);}
+.parallax-background15{ background-image:url(/assets/parallax/parallax-back15.jpg);}
+.parallax-background16{ background-image:url(/assets/parallax/parallax-back16.jpg);}
+.parallax-background-hike{ background-image:url(/assets/parallax/parallax-hike.png);}
+.parallax-background-tucks{ background-image:url(/assets/parallax/parallax-tucks-3.png);}
+.parallax-background-summit{ background-image:url(/assets/parallax/parallax-summit-sign.png);}
+.parallax-breadcrumbs { background-image:url(/assets/parallax/parallax-breadcrumbs.jpg);}
+.parallax-blog { background-image:url(/assets/parallax/parallax-blog.jpg);}
+.parallax-about { background-image:url(/assets/parallax/parallax-about.jpg);}
+.parallax-services { background-image:url(/assets/parallax/parallax-services.jpg);}
+.parallax-team { background-image:url(/assets/parallax/parallax-team.jpg);}
+.parallax-landing { background-image:url(/assets/parallax/parallax-landing.jpg);}
+.parallax-404 { background-image:url(/assets/parallax/parallax-404.jpg);}
+.parallax-search { background-image:url(/assets/parallax/parallax-search.jpg);}
+.parallax-shop { background-image:url(/assets/parallax/parallax-shop.jpg);}
+.parallax-portfolio{ background-image:url(/assets/parallax/parallax-portfolio.jpg);}
 
-
-.parallax-breadcrumbs { background-image:url(../img/demo/parallax/parallax-breadcrumbs.jpg);}
-.parallax-blog { background-image:url(../img/demo/parallax/parallax-blog.jpg);}
-.parallax-about { background-image:url(../img/demo/parallax/parallax-about.jpg);}
-.parallax-services { background-image:url(../img/demo/parallax/parallax-services.jpg);}
-.parallax-team { background-image:url(../img/demo/parallax/parallax-team.jpg);}
-.parallax-landing { background-image:url(../img/demo/parallax/parallax-landing.jpg);}
-.parallax-404 { background-image:url(../img/demo/parallax/parallax-404.jpg);}
-.parallax-search { background-image:url(../img/demo/parallax/parallax-search.jpg);}
-.parallax-shop { background-image:url(../img/demo/parallax/parallax-shop.jpg);}
-.parallax-portfolio{ background-image:url(../img/demo/parallax/parallax-portfolio.jpg);}
 
 @media only screen and (max-width: 768px) {
 .parallax{ background-position:50% 50% !important; background-attachment: scroll; }
@@ -1994,3 +1996,8 @@ html[dir="rtl"] .social-top {float: none; text-align: center;}
 ul.gallery {margin-left: 0;}
 ul.gallery li {width: 100% !important; /* this value + 2% should = 100% */}
 }
+
+.parallax-background-summit {
+	color: White;
+}
+

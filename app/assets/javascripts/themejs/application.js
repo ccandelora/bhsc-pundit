@@ -1,5 +1,5 @@
 /* -------------------------------------------------------------------------------- /
-	
+
 	Avendor jQuery
 	Created by 4grafx
 	v1.0 - 20.02.2014
@@ -8,7 +8,7 @@
 	+----------------------------------------------------+
 		TABLE OF CONTENTS
 	+----------------------------------------------------+
-	
+
 	[1]		Page Preloader
 	[2]		Initialize Boostrap
 	[3]		Main Menu
@@ -30,7 +30,7 @@
 	[19]	Back to top
 	[20]	Under Construction Counter
 	[21]	Animate Demo - remove on production websites
-	
+
 / -------------------------------------------------------------------------------- */
 
 var gfx=jQuery;
@@ -43,14 +43,14 @@ gfx.noConflict();
 
 
     gfx("body").queryLoader2({
-        barColor: "#F7505A",
+        barColor: "#EB2D2E",
         backgroundColor: "#fff",
         percentage: true,
         barHeight: 1,
         completeAnimation: "grow",
         minimumTime: 100,
 		onLoadComplete: hidePreLoader
-		
+
     });
 
 function hidePreLoader() {
@@ -127,7 +127,7 @@ gfx(document).on('click', '.gfx-nav .dropdown-menu', function(e) {
                     topOffset: 0,
                     setParentOnStick:   true
                 });
-				
+
 				 var shrinkHeader = 600;
   					gfx(window).scroll(function() {
     				var scroll = getCurrentScroll();
@@ -141,7 +141,7 @@ gfx(document).on('click', '.gfx-nav .dropdown-menu', function(e) {
 				function getCurrentScroll() {
 				return window.pageYOffset || document.documentElement.scrollTop;
 				}
-                
+
             });
 
 
@@ -156,8 +156,8 @@ gfx(document).ready(function(){
 		gfx("#slide-panel").slideToggle(250);
 		gfx(this).toggleClass("active"); return false;
 	});
-	
-	 
+
+
 });
 
 
@@ -166,9 +166,9 @@ gfx(document).ready(function(){
 	Revolution Slider
 -------------------------------------------------- */
 				jQuery(document).ready(function() {
-				
-					
-								
+
+
+
 					jQuery('.tp-banner').show().revolution(
 					{
 						dottedOverlay:"threexthree",
@@ -176,29 +176,29 @@ gfx(document).ready(function(){
 						startwidth:1170,
 						startheight:700,
 						hideThumbs:200,
-						
+
 						thumbWidth:100,
 						thumbHeight:50,
 						thumbAmount:3,
-						
+
 						navigationType:"none",
 						navigationArrows:"solo",
 						navigationStyle:"preview4",
-						
+
 						touchenabled:"on",
 						onHoverStop:"on",
-						
+
 						swipe_velocity: 0.7,
 						swipe_min_touches: 1,
 						swipe_max_touches: 1,
 						drag_block_vertical: false,
-												
+
 						parallax:"scroll",
 						parallaxBgFreeze:"on",
 						parallaxLevels:[10,20,30,40,50,60,70,80,90,100],
-												
+
 						keyboardNavigation:"off",
-						
+
 						navigationHAlign:"center",
 						navigationVAlign:"bottom",
 						navigationHOffset:0,
@@ -213,47 +213,47 @@ gfx(document).ready(function(){
 						soloArrowRightValign:"center",
 						soloArrowRightHOffset:20,
 						soloArrowRightVOffset:0,
-								
+
 						shadow:0,
 						fullWidth:"off",
 						fullScreen:"on",
 
 						spinner:"spinner4",
-						
+
 						stopLoop:"off",
 						stopAfterLoops:-1,
 						stopAtSlide:-1,
 
 						shuffle:"off",
-						
-						autoHeight:"off",						
-						forceFullWidth:"off",												
-												
+
+						autoHeight:"off",
+						forceFullWidth:"off",
+
 						hideThumbsOnMobile:"off",
-						hideNavDelayOnMobile:1500,						
+						hideNavDelayOnMobile:1500,
 						hideBulletsOnMobile:"off",
 						hideArrowsOnMobile:"off",
 						hideThumbsUnderResolution:0,
-						
+
 						hideSliderAtLimit:0,
 						hideCaptionAtLimit:0,
 						hideAllCaptionAtLilmit:0,
 						startWithSlide:0,
-						fullScreenOffsetContainer: ".header-wrapper"	
+						fullScreenOffsetContainer: ".header-wrapper"
 					});
-					
-					
-					
-									
+
+
+
+
 				});	//ready
 
 /* ---------------------------------------------------
 	Revolution Shop Slider
 -------------------------------------------------- */
 				jQuery(document).ready(function() {
-				
-					
-								
+
+
+
 					jQuery('.shop-slider').show().revolution(
 					{
 						dottedOverlay:"none",
@@ -261,29 +261,29 @@ gfx(document).ready(function(){
 						startwidth:1170,
 						startheight:600,
 						hideThumbs:200,
-						
+
 						thumbWidth:100,
 						thumbHeight:50,
 						thumbAmount:3,
-						
+
 						navigationType:"none",
 						navigationArrows:"solo",
 						navigationStyle:"preview4",
-						
+
 						touchenabled:"on",
 						onHoverStop:"on",
-						
+
 						swipe_velocity: 0.7,
 						swipe_min_touches: 1,
 						swipe_max_touches: 1,
 						drag_block_vertical: false,
-												
+
 						parallax:"scroll",
 						parallaxBgFreeze:"on",
 						parallaxLevels:[10,20,30,40,50,60,70,80,90,100],
-												
+
 						keyboardNavigation:"off",
-						
+
 						navigationHAlign:"center",
 						navigationVAlign:"bottom",
 						navigationHOffset:0,
@@ -298,38 +298,38 @@ gfx(document).ready(function(){
 						soloArrowRightValign:"center",
 						soloArrowRightHOffset:20,
 						soloArrowRightVOffset:0,
-								
+
 						shadow:0,
 						fullWidth:"off",
 						fullScreen:"off",
 
 						spinner:"spinner4",
-						
+
 						stopLoop:"off",
 						stopAfterLoops:-1,
 						stopAtSlide:-1,
 
 						shuffle:"off",
-						
-						autoHeight:"off",						
-						forceFullWidth:"off",												
-												
+
+						autoHeight:"off",
+						forceFullWidth:"off",
+
 						hideThumbsOnMobile:"off",
-						hideNavDelayOnMobile:1500,						
+						hideNavDelayOnMobile:1500,
 						hideBulletsOnMobile:"off",
 						hideArrowsOnMobile:"off",
 						hideThumbsUnderResolution:0,
-						
+
 						hideSliderAtLimit:0,
 						hideCaptionAtLimit:0,
 						hideAllCaptionAtLilmit:0,
 						startWithSlide:0,
-						fullScreenOffsetContainer: ".header-wrapper"	
+						fullScreenOffsetContainer: ".header-wrapper"
 					});
-					
-					
-					
-									
+
+
+
+
 				});	//ready
 
 /* ---------------------------------------------------
@@ -337,37 +337,37 @@ gfx(document).ready(function(){
 -------------------------------------------------- */
 
 		gfx(document).ready(function(){
-			
-		
-			
+
+
+
 			// "colio" plugin
 			gfx('.portfolio .portfolio-grid').colio({
 				theme: 'gfx',
 				placement: 'after',
 				scrollOffset: 60,
-				expandLink: '.portfolio-expand',          // selector for element to expand colio viewport  
-    			expandDuration: 900,                // duration of expand animation, ms  
-    			expandEasing: 'swing',              // easing for expand animation  
-    			collapseDuration: 500,              // duration of collapse animation, ms  
-    			collapseEasing: 'swing',            // easing for collapse animation  
-    			scrollDuration: 1300,                // page scroll duration, ms  
-    			scrollEasing: 'swing',              // page scroll easing  
-    			syncScroll: true,                  // sync page scroll with expand/collapse of colio viewport 
-    			contentFadeIn: 900,                 // content fade-in duration, ms  
-    			contentFadeOut: 300,                // content fade-out duration, ms  
-    			contentDelay: 600,                  // content fade-in delay on expand, ms 
-				closeText: '<span>X</span>',    // text/html for close button  
-				nextText: '<span></span>',      // text/html for next button  
-    			prevText: '<span></span>',      // text/html for previous button  
+				expandLink: '.portfolio-expand',          // selector for element to expand colio viewport
+    			expandDuration: 900,                // duration of expand animation, ms
+    			expandEasing: 'swing',              // easing for expand animation
+    			collapseDuration: 500,              // duration of collapse animation, ms
+    			collapseEasing: 'swing',            // easing for collapse animation
+    			scrollDuration: 1300,                // page scroll duration, ms
+    			scrollEasing: 'swing',              // page scroll easing
+    			syncScroll: true,                  // sync page scroll with expand/collapse of colio viewport
+    			contentFadeIn: 900,                 // content fade-in duration, ms
+    			contentFadeOut: 300,                // content fade-out duration, ms
+    			contentDelay: 600,                  // content fade-in delay on expand, ms
+				closeText: '<span>X</span>',    // text/html for close button
+				nextText: '<span></span>',      // text/html for next button
+    			prevText: '<span></span>',      // text/html for previous button
 				hiddenItems: '.isotope-hidden',
 				onExpand: 	function(content){gfx(".colio").resize() },
 
 				onContent: function(content){
-	
+
 						gfx('.carousel-box-portfolio .carousel',content).each(function(index, element) {
-							
+
 							var carousel = gfx(this).closest('.carousel-box-portfolio');
-							
+
 							gfx(this).owlCarousel({
 								//direction:'rtl', //use if your site is RTL
 								autoPlay	 	 : gfx(this).data('carousel-autoplay'),
@@ -378,11 +378,11 @@ gfx(document).ready(function(){
 								transitionStyle	 : gfx(this).data('carousel-transition'),
 								slideSpeed	     : gfx(this).data('carousel-speed'),
 								navigationText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
-							}) 
-							
+							})
+
 						});
 
-						
+
 						if (gfx().magnificPopup) {
 												  gfx('[data-lightbox=image], .lightbox').each(function(index, element) {gfx(this).magnificPopup({type:'image',	mainClass: 'mfp-fade',removalDelay: 300, fixedContentPos: false,  fixedBgPos: true,  overflowY: 'auto',	closeOnContentClick: true}); });
 												  gfx('[data-lightbox=video], [data-lightbox=map], [data-lightbox=iframe], .lightbox-video, .lightbox-map, .lightbox-iframe').each(function(index, element) {gfx(this).magnificPopup({mainClass: 'mfp-fade', removalDelay: 300, fixedContentPos: false, fixedBgPos: true, overflowY: 'auto',  type: 'iframe',  fixedContentPos: false});});
@@ -394,28 +394,28 @@ removalDelay: 300, fixedContentPos: false, fixedBgPos: true, overflowY: 'auto', 
 			});
 
 
-			
+
 			// "isotope" plugin
 			var $container = gfx('.portfolio-grid');
 			$container.imagesLoaded( function(){
 				$container.isotope({
-					
+
 				});
-			});	
+			});
 
 			var filter = '*', isotope_run = function(f) {
 				$container.isotope({filter: f}).
 				trigger('colio','excludeHidden');
-			};						
+			};
 			gfx('#filters a').click(function(){
 				var selector = gfx(this).attr('data-filter');
 				$container.isotope({ filter: selector });
 				return false;
 			});
-			
+
 			// set selected menu items
 			var $optionSets = gfx('.option-set'),
-			$optionLinks = $optionSets.find('a'); 
+			$optionLinks = $optionSets.find('a');
 			$optionLinks.click(function(){
 				var $this = gfx(this);
 				// don't proceed if already selected
@@ -424,14 +424,14 @@ removalDelay: 300, fixedContentPos: false, fixedBgPos: true, overflowY: 'auto', 
 				}
 			var $optionSet = $this.parents('.option-set');
 			$optionSet.find('.selected').removeClass('selected');
-			$this.addClass('selected'); 
+			$this.addClass('selected');
 			});
-			
+
 			isotope_run(filter);
-			
+
 		});
 
-				
+
 /* ---------------------------------------------------
 	OWL Carousel
 -------------------------------------------------- */
@@ -458,10 +458,10 @@ removalDelay: 300, fixedContentPos: false, fixedBgPos: true, overflowY: 'auto', 
 /* Sync Carousel */
 
     gfx(document).ready(function() {
-     
+
     var sync1 = gfx("#full-sync");
     var sync2 = gfx("#thumb-sync");
-     
+
     sync1.owlCarousel({
     singleItem : true,
     slideSpeed : 1000,
@@ -471,7 +471,7 @@ removalDelay: 300, fixedContentPos: false, fixedBgPos: true, overflowY: 'auto', 
     afterAction : syncPosition,
     responsiveRefreshRate : 200,
     });
-     
+
     sync2.owlCarousel({
     items : 3,
 	itemsDesktop : [1199,3],
@@ -484,7 +484,7 @@ removalDelay: 300, fixedContentPos: false, fixedBgPos: true, overflowY: 'auto', 
     el.find(".owl-item").eq(0).addClass("synced");
     }
     });
-     
+
     function syncPosition(el){
     var current = this.currentItem;
     gfx("#thumb-sync")
@@ -496,13 +496,13 @@ removalDelay: 300, fixedContentPos: false, fixedBgPos: true, overflowY: 'auto', 
     center(current)
     }
     }
-     
+
     gfx("#thumb-sync").on("click", ".owl-item", function(e){
     e.preventDefault();
     var number = gfx(this).data("owlItem");
     sync1.trigger("owl.goTo",number);
     });
-     
+
     function center(number){
     var sync2visible = sync2.data("owlCarousel").owl.visibleItems;
     var num = number;
@@ -512,7 +512,7 @@ removalDelay: 300, fixedContentPos: false, fixedBgPos: true, overflowY: 'auto', 
     var found = true;
     }
     }
-     
+
     if(found===false){
     if(num>sync2visible[sync2visible.length-1]){
     sync2.trigger("owl.goTo", num - sync2visible.length+2)
@@ -528,7 +528,7 @@ removalDelay: 300, fixedContentPos: false, fixedBgPos: true, overflowY: 'auto', 
     sync2.trigger("owl.goTo", num-1)
     }
     }
-     
+
     });
 
 
@@ -562,10 +562,10 @@ if (gfx().magnificPopup) {
            	overflowY: 'auto',
 			removalDelay: 300,
 			closeOnContentClick: true,
-			
-		});		
+
+		});
 	});
-	
+
 	gfx('[data-lightbox=video], [data-lightbox=map], [data-lightbox=iframe], .lightbox-video, .lightbox-map, .lightbox-iframe').each(function(index, element) {
 		gfx(this).magnificPopup({
 			mainClass: 'mfp-fade',
@@ -577,7 +577,7 @@ if (gfx().magnificPopup) {
 		  	fixedContentPos: false
 		});
 	});
-	
+
 	gfx('[data-lightbox=gallery], .lightbox-gallery').each(function(index, element) {
 		gfx(this).magnificPopup({
 			mainClass: 'mfp-fade',
@@ -592,8 +592,8 @@ if (gfx().magnificPopup) {
 			}
 		});
 	});
-	
-	
+
+
 };
 
 
@@ -602,15 +602,15 @@ if (gfx().magnificPopup) {
 -------------------------------------------------- */
 
         gfx(document).ready(function() {
-            gfx(".ToolTip").OpieTooltip({     
+            gfx(".ToolTip").OpieTooltip({
 
             });
-        }); 
+        });
 
 /* ---------------------------------------------------
 	Animation on Scroll
--------------------------------------------------- */	
-		
+-------------------------------------------------- */
+
 gfx('.animation').waypoint(function(direction) {
   gfx(this).addClass('animation-active');
 }, { 	offset: '100%',
@@ -631,21 +631,21 @@ if (gfx('#google-map-footer').length>0) {
 		zoomControlOptions: {style: google.maps.ZoomControlStyle.SMALL},
 		draggable:!0,
 		navigationControl:!1,
-		styles: [	{featureType:"administrative",elementType:"all",stylers:[{visibility:"on"},{saturation:-100},{lightness:20}]},	{featureType:"road",elementType:"all",stylers:[{visibility:"on"},{saturation:-100},{lightness:40}]},	{featureType:"water",elementType:"all",stylers:[{visibility:"on"},{saturation:-10},{lightness:30}]},	{featureType:"landscape.man_made",elementType:"all",stylers:[{visibility:"simplified"},{saturation:-60},{lightness:10}]},	{featureType:"landscape.natural",elementType:"all",stylers:[{visibility:"simplified"},{saturation:-60},{lightness:60}]},	{featureType:"poi",elementType:"all",stylers:[{visibility:"off"},{saturation:-100},{lightness:60}]},	{featureType:"transit",elementType:"all",stylers:[{visibility:"off"},{saturation:-100},{lightness:60}]}]	
+		styles: [	{featureType:"administrative",elementType:"all",stylers:[{visibility:"on"},{saturation:-100},{lightness:20}]},	{featureType:"road",elementType:"all",stylers:[{visibility:"on"},{saturation:-100},{lightness:40}]},	{featureType:"water",elementType:"all",stylers:[{visibility:"on"},{saturation:-10},{lightness:30}]},	{featureType:"landscape.man_made",elementType:"all",stylers:[{visibility:"simplified"},{saturation:-60},{lightness:10}]},	{featureType:"landscape.natural",elementType:"all",stylers:[{visibility:"simplified"},{saturation:-60},{lightness:60}]},	{featureType:"poi",elementType:"all",stylers:[{visibility:"off"},{saturation:-100},{lightness:60}]},	{featureType:"transit",elementType:"all",stylers:[{visibility:"off"},{saturation:-100},{lightness:60}]}]
 	},
 		n=new google.maps.Map(document.getElementById("google-map-footer"),o);
 		google.maps.event.addDomListener(window,"resize",function(){var e=n.getCenter();
 		google.maps.event.trigger(n,"resize"),n.setCenter(e)});
-		
+
 		var g='<div class="map-marker"><h4 class="color-dark xbold">AVENDOR</h4><p>United States of America</p><p>New York. 123 Fifth Avenue</p></div>',a=new google.maps.InfoWindow({content:g})
-		,t=new google.maps.MarkerImage("img/theme/google-marker.png",new google.maps.Size(157,70),
+		,t=new google.maps.MarkerImage("/assets/google-marker.png",new google.maps.Size(157,70),
 		new google.maps.Point(0,0),new google.maps.Point(75,50)),
 		i=new google.maps.LatLng(37.331789, -122.029620),
 		p=new google.maps.Marker({position:i,map:n,icon:t,zIndex:3});
 		google.maps.event.addListener(p,"click",function(){a.open(n,p)}),
 		gfx(".gmap-button").click(function(){gfx("#google-map-footer").slideToggle(300,function(){google.maps.event.trigger(n,"resize"),n.setCenter(e)}),
 		gfx(this).toggleClass("show-map")});
-		
+
 }
 
 if (gfx('#google-map').length>0) {
@@ -659,14 +659,14 @@ if (gfx('#google-map').length>0) {
 		zoomControlOptions: {style: google.maps.ZoomControlStyle.SMALL},
 		draggable:!0,
 		navigationControl:!1,
-		styles: [	{featureType:"administrative",elementType:"all",stylers:[{visibility:"on"},{saturation:-100},{lightness:20}]},	{featureType:"road",elementType:"all",stylers:[{visibility:"on"},{saturation:-100},{lightness:40}]},	{featureType:"water",elementType:"all",stylers:[{visibility:"on"},{saturation:-10},{lightness:30}]},	{featureType:"landscape.man_made",elementType:"all",stylers:[{visibility:"simplified"},{saturation:-60},{lightness:10}]},	{featureType:"landscape.natural",elementType:"all",stylers:[{visibility:"simplified"},{saturation:-60},{lightness:60}]},	{featureType:"poi",elementType:"all",stylers:[{visibility:"off"},{saturation:-100},{lightness:60}]},	{featureType:"transit",elementType:"all",stylers:[{visibility:"off"},{saturation:-100},{lightness:60}]}]	
+		styles: [	{featureType:"administrative",elementType:"all",stylers:[{visibility:"on"},{saturation:-100},{lightness:20}]},	{featureType:"road",elementType:"all",stylers:[{visibility:"on"},{saturation:-100},{lightness:40}]},	{featureType:"water",elementType:"all",stylers:[{visibility:"on"},{saturation:-10},{lightness:30}]},	{featureType:"landscape.man_made",elementType:"all",stylers:[{visibility:"simplified"},{saturation:-60},{lightness:10}]},	{featureType:"landscape.natural",elementType:"all",stylers:[{visibility:"simplified"},{saturation:-60},{lightness:60}]},	{featureType:"poi",elementType:"all",stylers:[{visibility:"off"},{saturation:-100},{lightness:60}]},	{featureType:"transit",elementType:"all",stylers:[{visibility:"off"},{saturation:-100},{lightness:60}]}]
 	},
 		n=new google.maps.Map(document.getElementById("google-map"),o);
 		google.maps.event.addDomListener(window,"resize",function(){var e=n.getCenter();
 		google.maps.event.trigger(n,"resize"),n.setCenter(e)});
-		
+
 		var g='<div class="map-marker"><h4 class="color-dark xbold">AVENDOR</h4><p>United States of America</p><p>New York. 123 Fifth Avenue</p></div>',a=new google.maps.InfoWindow({content:g})
-		,t=new google.maps.MarkerImage("img/theme/google-marker.png",new google.maps.Size(157,70),
+		,t=new google.maps.MarkerImage("/assets/google-marker.png",new google.maps.Size(157,70),
 		new google.maps.Point(0,0),new google.maps.Point(75,50)),
 		i=new google.maps.LatLng(37.331789, -122.029620),
 		p=new google.maps.Marker({position:i,map:n,icon:t,zIndex:3});
@@ -702,10 +702,10 @@ gfx('.timer').countTo()
 	Pie Chart
 -------------------------------------------------- */
 
-gfx(document).ready(function() 
-	
-	{ jQuery(".chart").waypoint(function(direction) { 
-	
+gfx(document).ready(function()
+
+	{ jQuery(".chart").waypoint(function(direction) {
+
   gfx('.progress-pie .chart').each(function () {
 	var carousel = gfx(this).closest('.progress-pie');
 
@@ -719,9 +719,9 @@ gfx(document).ready(function()
 		size:180,
 		rotate: 0,
 		animate:2000,
-        
+
     })
-  });	
+  });
 	}, { offset: '100%',
 triggerOnce: true }); });
 
@@ -731,10 +731,11 @@ triggerOnce: true }); });
 /* ---------------------------------------------------
 	Twitter
 -------------------------------------------------- */
-
+/*
       gfx(function($){
         gfx(".twitterfeed").tweet({
 			modpath: "http://fourgrafx.com/avendor/avendor-multipage/twitter/",
+					crossDomain: true,
           	username: "4grafx",
           	count: 3,
 			template: "{join}{text}{time}{avatar}",
@@ -745,6 +746,7 @@ triggerOnce: true }); });
       gfx(function($){
         gfx(".twitter").tweet({
 			modpath: "http://fourgrafx.com/avendor/avendor-multipage/twitter/",
+          	crossDomain: true,
           	username: "4grafx",
 			avatar_size: 48,
           	count: 3,
@@ -756,19 +758,20 @@ triggerOnce: true }); });
       gfx(function($){
         gfx(".twitter-footer").tweet({
 			modpath: "http://fourgrafx.com/avendor/avendor-multipage/twitter/",
+          	crossDomain: true,
           	username: "4grafx",
           	count: 2,
 			template: "{join}{text}{time}",
           	loading_text: "loading tweets..."
 			});
 		});
-
+*/
 		/* -- Twitter Carousel -- */
-		gfx(document).ready(function() {
-     
+/*		gfx(document).ready(function() {
+
     		gfx(".twitterfeed .tweet_list").owlCarousel({
-     
-    			autoPlay: false,     
+
+    			autoPlay: false,
 				items : 1,
 				singleItem : true,
 				navigation: true,
@@ -778,10 +781,10 @@ triggerOnce: true }); });
 				navigationText : ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
 	  			autoHeight : true,
 				});
-     
+
 		});
 
-
+*/
 
 /* ---------------------------------------------------
 	Video BG
@@ -796,7 +799,7 @@ gfx('.qup').on('click',function(){
 
 gfx('.qdown').on('click',function(){
     gfx('.input-quantity').val(parseInt(gfx('.input-quantity').val())-1);
-}); 
+});
 
 
 /* ---------------------------------------------------
@@ -804,14 +807,14 @@ gfx('.qdown').on('click',function(){
 -------------------------------------------------- */
 
 gfx(document).ready(function(){
- 
+
 	gfx(window).scroll(function(){
 	    if (gfx(this).scrollTop() > 100) {
 	        gfx('.scrollup').fadeIn();
 	    } else {
 	        gfx('.scrollup').fadeOut();
 	    }
-	});	
+	});
 
 });
 
