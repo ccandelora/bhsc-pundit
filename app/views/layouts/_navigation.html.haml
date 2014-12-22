@@ -1,13 +1,47 @@
--# navigation styled for Bootstrap 3.0
-%nav.navbar.navbar-default.navbar-fixed-top
+.header-top
   .container
-    .navbar-header
-      %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
-        %span.sr-only Toggle navigation
-        %span.icon-bar
-        %span.icon-bar
-        %span.icon-bar
-      = image_tag 'brettllogo.jpg', height: '75px', width: '75px', class:'logo'
-    .collapse.navbar-collapse
-      %ul.nav.navbar-nav
-        = render 'layouts/navigation_links'
+    .row
+      .col-md-6.colsm-6.columns
+        .header-top-left
+          %ul.social-top
+            %li
+              = link_to '#', class: 'Tooltip' do
+                Facebook
+                %span.fa.fa-facebook
+            %li
+              = link_to '#', class: 'Tooltip' do
+                Twitter
+                %span.fa.fa-twitter
+            %li
+              = link_to '#', class: 'Tooltip' do
+                Google+
+                %span.fa.fa-google-plus
+            %li
+              = link_to '#', class: 'Tooltip' do
+                LinkedIn
+                %span.fa.fa-linkedin
+            %li
+              = link_to '#', class: 'Tooltip' do
+                Pinterest
+                %span.fa.fa-pinterest
+      .col-md-6.col-sm-6.columns
+        .header-top--right
+          %ul.top-menu
+            %li
+              %a
+                %i.fa.fa-shopping-cart
+                  0 item(s) - $0.00
+              .dropdown
+                %a.dropdown-toggle{data: {toggle: 'dropdown'}}
+                  %i.fa.fa-globe
+                    English
+                  %b.caret
+                %ul.dropdown-menu.dropdown-menu-right
+                  %li.active
+                    %a English
+                  %li.active
+                    %a Dude
+                  %li.active
+                    %a Kook
+= render 'layouts/main_nav'
+= render 'layouts/everything'
