@@ -1,39 +1,3 @@
-/*
-Theme Name: Avendor
-Author: FourGrafx
-Author URI: http://www.fourgrafx.com
-Version: 1.0.0
-Description: A Beautiful, Professional and Multipurpose Theme Made by FourGrafx
-*/
-
-
-/* 	+----------------------------------------------------+
-		TABLE OF CONTENTS
-	+----------------------------------------------------+
-
-	[1]		Page Preloader
-	[2]		Grid Blocks
-	[3]		Slide Top Panel Container
-	[4]		Header Wrapper
-	[5]		Slider Wrapper
-	[6]		Main Wrapper Header
-	[7]		Main Navigation
-	[8]		Footer Wrapper
-	[9]		Typography
-	[10]	Elements
-	[11]	Backgrounds and Colors
-	[12]	Dividers
-	[13]	Google Maps
-	[14]	General Pages
-	[15]	Blog Pages
-	[16]	Search Results
-	[17]	Under Construction
-	[18]	Shop Pages
-	[19]	RTL Styles
-	[20]	Responsive Media Queries
-	*/
-
-
 /* Preload */
 .QOverlay {background-color: #000000;z-index: 99999;}
 .QLoader {background-color: #CCCCCC;height: 1px;}
