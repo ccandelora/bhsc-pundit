@@ -11,7 +11,7 @@
         <!-- SLIDE  -->
         <li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000" data-fstransition="fade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off"  data-title="We Are Avendor">
           <!-- MAIN IMAGE -->
-          <img src="/assets/slider/revolution-slider1.jpg"  alt="slidebg1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+          <%= image_tag 'slider/revolution-slider1.jpg', alt:'slidebg1', data: {bgfit: 'cover', bgposition: 'center center', bgrepeat: 'no-repeat'} %>
           <div class="tp-caption large_bold_white customin customout tp-resizeme rs-parallaxlevel-3"
             data-x="center"
             data-y="150"
@@ -61,7 +61,7 @@
         <!-- SLIDE  -->
         <li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000" data-fstransition="fade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off"  data-title="Amazing Features">
           <!-- MAIN IMAGE -->
-          <img src="/assets/slider/revolution-slider2.jpg"  alt="slidebg2" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+          <%= image_tag 'slider/revolution-slider2.jpg', alt:'slidebg2', data: {bgfit: 'cover', bgposition: 'center center', bgrepeat: 'no-repeat'} %>
           <div class="tp-caption large_bold_white customin customout rs-parallaxlevel-3"
             data-x="center"
             data-y="150"
@@ -111,7 +111,7 @@
         <!-- SLIDE  -->
         <li data-transition="slidehorizontal" data-slotamount="1" data-masterspeed="1000" data-thumb="/assets/slider/revolution-slider-video.jpg"  data-fstransition="fade" data-fsmasterspeed="1000" data-fsslotamount="7" data-saveperformance="off"  data-title="Free on the Beach">
           <!-- MAIN IMAGE -->
-          <img src="/assets/slider/revolution-slider-video.jpg"  alt="video_woman_cover3"  data-bgposition="center center" data-bgfit="cover" data-bgrepeat="no-repeat">
+          <%= image_tag 'slider/revolution-slider-video.jpg', alt:'video_woman_cover3', data: {bgfit: 'cover', bgposition: 'center center', bgrepeat: 'no-repeat'} %>
           <!-- LAYERS -->
 
           <div class="tp-caption large_bold_black customin customout tp-resizeme rs-parallaxlevel-3"
@@ -163,7 +163,7 @@
               data-autoplayonlyfirsttime="false"
               data-nextslideatend="true"
               data-volume="mute" data-forceCover="1" data-aspectratio="16:9" data-forcerewind="on" style="z-index: 2;">
-            <video class="" preload="none" width="100%" height="100%" poster='/assets/slider/revolution-slider-video.jpg'>
+            <video class="" preload="none" width="100%" height="100%" poster=''>
               <source src='http://fourgrafx.com/video/main-video_1.ogv' type='video/ogg' />
               <source src='http://fourgrafx.com/video/main-video_1.webm' type='video/webm' />
             </video>
@@ -301,7 +301,7 @@
   <div class="container">
     <div class="white-space space-big"></div>
     <div class="row">
-      <div class="col-md-4 col-sm-4 columns"> <img class="img-responsive animation fadeInLeft" src="/assets/house_v2.jpg" alt="Avendor Counters">
+      <div class="col-md-4 col-sm-4 columns"> <%= image_tag 'house_v2.jpg', class: 'img-responsive animation fadeInLeft', alt: 'Avendor Counters' %>
         <div class="white-space space-small"></div>
       </div>
       <div class="col-md-8 col-sm-8 columns">
@@ -398,7 +398,7 @@
     <div class="carousel-box" >
       <div class="carousel" data-carousel-autoplay="false" data-carousel-items="4" data-carousel-nav="true" data-carousel-pagination="false"  data-carousel-speed="1000">
         <div class="carousel-item animation fadeInLeft">
-          <div class="overlay-wrapper"> <img src="/assets/portfolio/branding/branding-1.jpg" alt="Portfolio 1">
+          <div class="overlay-wrapper"> <%= image_tag 'portfolio/branding/branding-1.jpg', alt:'Portfolio 1' %>
             <div class="overlay-wrapper-content">
               <div class="overlay-details"> <a class="color-white" href="/assets/portfolio/branding/branding-1.jpg" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a> <a class="color-white" href="#"><span class="livicon" data-n="more"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a> </div>
               <div class="overlay-bg"></div>
@@ -410,7 +410,7 @@
           </div>
         </div>
         <div class="carousel-item animation fadeInLeft delay1">
-          <div class="overlay-wrapper"> <img src="/assets/portfolio/webdesign/web-3.jpg" alt="Portfolio 2">
+          <div class="overlay-wrapper"> <%= image_tag 'portfolio/webdesign/web-3.jpg', alt:'Portfolio 2' %>
             <div class="overlay-wrapper-content">
               <div class="overlay-details"> <a class="color-white" href="/assets/portfolio/webdesign/web-3.jpg" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a> <a class="color-white" href="#"><span class="livicon" data-n="more"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a> </div>
               <div class="overlay-bg"></div>
@@ -422,7 +422,7 @@
           </div>
         </div>
         <div class="carousel-item animation fadeInLeft delay2">
-          <div class="overlay-wrapper"> <img src="/assets/portfolio/print/print-1.jpg" alt="Portfolio 3">
+          <div class="overlay-wrapper"> <%= image_tag 'portfolio/print/print-1.jpg', alt:'Portfolio 3' %>
             <div class="overlay-wrapper-content">
               <div class="overlay-title">
                 <h3>Ut sagittis ultrices urna</h3>
@@ -437,7 +437,7 @@
           </div>
         </div>
         <div class="carousel-item animation fadeInLeft delay3">
-          <div class="overlay-wrapper"> <img src="/assets/portfolio/branding/branding-4.jpg" alt="Portfolio 4">
+          <div class="overlay-wrapper"> <%= image_tag 'portfolio/branding/branding-4.jpg', alt:'Portfolio 4' %>
             <div class="overlay-wrapper-content">
               <div class="overlay-details"> <a class="color-white" href="/assets/portfolio/branding/branding-4.jpg" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a> <a class="color-white" href="#"><span class="livicon" data-n="more"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a> </div>
               <div class="overlay-bg"></div>
@@ -449,7 +449,7 @@
           </div>
         </div>
         <div class="carousel-item animation fadeInLeft delay4">
-          <div class="overlay-wrapper"> <img src="/assets/portfolio/webdesign/web-4.jpg" alt="Portfolio 5">
+          <div class="overlay-wrapper"> <%= image_tag 'portfolio/webdesign/web-4.jpg', alt:'Portfolio 5' %>
             <div class="overlay-wrapper-content">
               <div class="overlay-details"> <a class="color-white" href="/assets/portfolio/webdesign/web-4.jpg" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a> <a class="color-white" href="#"><span class="livicon" data-n="more"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a> </div>
               <div class="overlay-bg"></div>
@@ -461,7 +461,7 @@
           </div>
         </div>
         <div class="carousel-item animation fadeInLeft delay4">
-          <div class="overlay-wrapper"> <img src="/assets/portfolio/branding/branding-3.jpg" alt="Portfolio 5">
+          <div class="overlay-wrapper"> <%= image_tag 'portfolio/branding/branding-3.jpg', alt: 'Portfolio 5' %>
             <div class="overlay-wrapper-content">
               <div class="overlay-details"> <a class="color-white" href="/assets/portfolio/branding/branding-3.jpg" data-lightbox="image"><span class="livicon" data-n="plus"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a> <a class="color-white" href="#"><span class="livicon" data-n="more"  data-color="#ffffff" data-hovercolor="#ffffff" data-op="1" data-onparent="true"></span></a> </div>
               <div class="overlay-bg"></div>
@@ -545,7 +545,7 @@
           </ul>
           <!-- /Icon List-->
         </div>
-        <div class="col-md-4"> <img src="/assets/brettllogo.png" class="img-responsive animation fadeInUp" alt="Offer">
+        <div class="col-md-4"> <%= image_tag 'brettllogo.png', class: 'img-responsive animation fadeInUp',alt: 'Offer' %>
           <div class="white-space space-small"></div>
         </div>
         <div class="col-md-4">
@@ -603,7 +603,7 @@
         <!-- Carousel -->
         <div class="carousel-box" >
           <div class="carousel carousel-simple" data-carousel-autoplay="9000" data-carousel-items="3" data-carousel-nav="false" data-carousel-pagination="true"  data-carousel-speed="1000">
-            <div class="carousel-item"> <a href="blog-single-post.html"><%= image_tag'/blog/blog1-alt.jpg' %></a>
+            <div class="carousel-item"> <a href="blog-single-post.html"><%= image_tag'blog/blog1-alt.jpg' %></a>
               <div class="panel panel-default">
                 <div class="panel-body">
                   <h5><a href="blog-single-post.html">Aliquam volutpat lacus</a></h5>
@@ -616,7 +616,7 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item"> <a href="blog-single-post.html"><img src="/assets/blog/blog2-alt.jpg" alt="Article 2"></a>
+            <div class="carousel-item"> <a href="blog-single-post.html"><%= image_tag 'blog/blog2-alt.jpg', alt: 'Article 2' %></a>
               <div class="panel panel-default">
                 <div class="panel-body">
                   <h5><a href="blog-single-post.html">Morbi commodo eget est</a></h5>
@@ -629,7 +629,7 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item"> <a href="blog-single-post.html"><img src="/assets/blog/blog3-alt.jpg" alt="Article 3"></a>
+            <div class="carousel-item"> <a href="blog-single-post.html"><%= image_tag 'blog/blog3-alt.jpg', alt: 'Article 3' %></a>
               <div class="panel panel-default">
                 <div class="panel-body">
                   <h5><a href="blog-single-post.html">Quisque at purus ac libero</a></h5>
@@ -642,7 +642,7 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item"> <a href="blog-single-post.html"><img src="/assets/blog/blog4-alt.jpg" alt="Article 4"></a>
+            <div class="carousel-item"> <a href="blog-single-post.html"><%= image_tag 'blog/blog4-alt.jpg', alt: 'Article 4' %></a>
               <div class="panel panel-default">
                 <div class="panel-body">
                   <h5><a href="blog-single-post.html">Cum sociis penatibus</a></h5>
@@ -655,7 +655,7 @@
                 </div>
               </div>
             </div>
-            <div class="carousel-item"> <a href="blog-single-post.html"><img src="/assets/blog/blog5-alt.jpg" alt="Article 5"></a>
+            <div class="carousel-item"> <a href="blog-single-post.html"><%= image_tag 'blog/blog5-alt.jpg', alt: 'Article 5' %></a>
               <div class="panel panel-default">
                 <div class="panel-body">
                   <h5><a href="blog-single-post.html">Fusce placerat augue</a></h5>

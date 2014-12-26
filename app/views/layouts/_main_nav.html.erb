@@ -13,7 +13,7 @@
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header"> <a class="navbar-toggle" data-toggle="collapse" data-target="#gfx-collapse"></a>
-              <div class="logo"> <a href="index.html"><img src="/assets/brettllogo.png" alt="Logo" width="75px"></a> </div>
+              <div class="logo"> <a href="index.html"><%= image_tag 'brettllogo.png', lat: 'Logo', width: '75px' %></a> </div>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -124,7 +124,7 @@
                           </div>
                           <div class="col-lg-3 col-sm-3">
                             <h4>AVENDOR Features</h4>
-                            <img src="/assets/content/features.jpg" class="img-responsive" alt="AVENDOR Features">
+                            <%= image_tag 'content/features.jpg', class: 'img-responsive', alt: 'AVENDOR Features' %>
                             <p>You can view all the shortcodes and features just by clicking the button bellow!</p>
                             <a href="font-avendor-icons.html" class="btn btn-default btn-xs btn-alt">View All Features</a> </div>
                         </div>
