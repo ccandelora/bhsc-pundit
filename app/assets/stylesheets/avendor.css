@@ -56,70 +56,70 @@ outline : none !important;
 }
 /*body backgrounds*/
 .bg-pattern1 {
-	background:url("/assets/bg/bg-pattern1.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern1.png') repeat fixed center 0;
 }
 .bg-pattern2 {
-	background:url("/assets/bg/bg-pattern2.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern2.png') repeat fixed center 0;
 }
 .bg-pattern3 {
-	background:url("/assets/bg/bg-pattern3.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern3.png') repeat fixed center 0;
 }
 .bg-pattern4 {
-	background:url("/assets/bg/bg-pattern4.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern4.png') repeat fixed center 0;
 }
 .bg-pattern5 {
-	background:url("/assets/bg/bg-pattern5.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern5.png') repeat fixed center 0;
 }
 .bg-pattern6 {
-	background:url("/assets/bg/bg-pattern6.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern6.png') repeat fixed center 0;
 }
 .bg-pattern7 {
-	background:url("/assets/bg/bg-pattern7.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern7.png') repeat fixed center 0;
 }
 .bg-pattern8 {
-	background:url("/assets/bg/bg-pattern8.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern8.png') repeat fixed center 0;
 }
 .bg-pattern9 {
-	background:url("/assets/bg/bg-pattern9.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern9.png') repeat fixed center 0;
 }
 .bg-pattern10 {
-	background:url("/assets/bg/bg-pattern10.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern10.png') repeat fixed center 0;
 }
 .bg-pattern11 {
-	background:url("/assets/bg/bg-pattern11.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern11.png') repeat fixed center 0;
 }
 .bg-pattern12 {
-	background:url("/assets/bg/bg-pattern12.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern12.png') repeat fixed center 0;
 }
 .bg-pattern13 {
-	background:url("/assets/bg/bg-pattern13.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern13.png') repeat fixed center 0;
 }
 .bg-pattern14 {
-	background:url("/assets/bg/bg-pattern14.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern14.png') repeat fixed center 0;
 }
 .bg-pattern15 {
-	background:url("/assets/bg/bg-pattern15.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern15.png') repeat fixed center 0;
 }
 .bg-pattern16 {
-	background:url("/assets/bg/bg-pattern16.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern16.png') repeat fixed center 0;
 }
 .bg-pattern17 {
-	background:url("/assets/bg/bg-pattern17.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern17.png') repeat fixed center 0;
 }
 .bg-pattern18 {
-	background:url("/assets/bg/bg-pattern18.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern18.png') repeat fixed center 0;
 }
 .bg-pattern19 {
-	background:url("/assets/bg/bg-pattern19.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern19.png') repeat fixed center 0;
 }
 .bg-pattern20 {
-	background:url("/assets/bg/bg-pattern20.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern20.png') repeat fixed center 0;
 }
 .bg-pattern21 {
-	background:url("/assets/bg/bg-pattern21.png") repeat fixed center 0;
+	background-image: image-url('bg/bg-pattern21.png') repeat fixed center 0;
 }
 .bg-custom {
-	background:url("/assets/bg/custom.jpg") repeat fixed center 0;
+	background-image: image-url('bg/custom.jpg') repeat fixed center 0;
 }
 /*===============================
 ========== Boxed Version ==========
