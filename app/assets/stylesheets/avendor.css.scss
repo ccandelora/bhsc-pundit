@@ -46,6 +46,9 @@ a:focus, a:active, button::-moz-focus-inner, input[type="reset"]::-moz-focus-inn
 border: 0;
 outline : none !important;
 }
+.text-right, .text-left{
+	color: black;
+}
 .btn {
 	-webkit-transition: all 0.3s ease-in-out;
 	-moz-transition: all 0.3s ease-in-out;
@@ -1156,6 +1159,12 @@ h5.fancy-title, h6.fancy-title {
 }
 .parallax-background-summit {
 	background-image: image-url('parallax/parallax-summit-sign.png');
+}
+.parallax-background-dropin {
+	background-image: image-url('parallax/parallax-dropin.jpg');
+}
+.parallax-background-fields {
+	background-image: image-url('parallax/parallax-field-snow.jpg');
 }
 .parallax-breadcrumbs {
 	background-image: image-url('parallax/parallax-breadcrumbs.jpg');
