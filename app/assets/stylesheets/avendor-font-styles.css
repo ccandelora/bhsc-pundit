@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: "avendor-icons";
-  src:url("avendor-icons.eot");
-  src:url("avendor-icons.eot?#iefix") format("embedded-opentype"),
-    url("avendor-icons.woff") format("woff"),
-    url("avendor-icons.ttf") format("truetype"),
-    url("avendor-icons.svg#avendor-icons") format("svg");
+  src:url("fonts/avendor-icons.eot");
+  src:url("fonts/avendor-icons.eot?#iefix") format("embedded-opentype"),
+    url("fonts/avendor-icons.woff") format("woff"),
+    url("fonts/avendor-icons.ttf") format("truetype"),
+    url("fonts/avendor-icons.svg#avendor-icons") format("svg");
   font-weight: normal;
   font-style: normal;
 

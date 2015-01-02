@@ -1,47 +1,20 @@
 .header-top
   .container
     .row
-      .col-md-6.colsm-6.columns
+      .col-md-12.colsm-12.columns
         .header-top-left
           %ul.social-top
             %li
-              = link_to '#', class: 'Tooltip' do
-                Facebook
+              = link_to 'https://www.facebook.com/brettl.hupfers', class: 'Tooltip' do
                 %span.fa.fa-facebook
             %li
-              = link_to '#', class: 'Tooltip' do
-                Twitter
+              = link_to 'https://twitter.com/Brettl_Hupfers', class: 'Tooltip' do
                 %span.fa.fa-twitter
             %li
-              = link_to '#', class: 'Tooltip' do
-                Google+
+              = link_to 'https://plus.google.com/u/0/106339247993048811475/posts', class: 'Tooltip' do
                 %span.fa.fa-google-plus
             %li
               = link_to '#', class: 'Tooltip' do
-                LinkedIn
-                %span.fa.fa-linkedin
-            %li
-              = link_to '#', class: 'Tooltip' do
-                Pinterest
-                %span.fa.fa-pinterest
-      .col-md-6.col-sm-6.columns
-        .header-top--right
-          %ul.top-menu
-            %li
-              %a
-                %i.fa.fa-shopping-cart
-                  0 item(s) - $0.00
-              .dropdown
-                %a.dropdown-toggle{data: {toggle: 'dropdown'}}
-                  %i.fa.fa-globe
-                    English
-                  %b.caret
-                %ul.dropdown-menu.dropdown-menu-right
-                  %li.active
-                    %a English
-                  %li.active
-                    %a Dude
-                  %li.active
-                    %a Kook
+                %span.fa.fa-instagram
 = render 'layouts/main_nav'
 = render 'layouts/everything'
