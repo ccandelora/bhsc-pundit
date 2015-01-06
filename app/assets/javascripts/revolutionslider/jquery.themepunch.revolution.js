@@ -38,7 +38,7 @@
 
 					navigationType:"bullet",				// bullet, thumb, none
 					navigationArrows:"solo",				// nextto, solo, none
-					navigationInGrid:"off",					// on/off  
+					navigationInGrid:"off",					// on/off
 
 					hideThumbsOnMobile:"off",
 					hideBulletsOnMobile:"off",
@@ -106,9 +106,9 @@
 
 
 					return this.each(function() {
-						
+
 						initSlider(jQuery(this),options)
-																						
+
 					})
 				},
 
@@ -227,21 +227,21 @@
 				}
 
 
-}) 
+})
 
 		function initSlider(container,opt) {
 							if (opt.navigationStyle=="preview1" ||  opt.navigationStyle=="preview3" || opt.navigationStyle=="preview4") {
 										opt.soloArrowLeftHalign="left";
 										opt.soloArrowLeftValign="center";
 										opt.soloArrowLeftHOffset=0;
-										opt.soloArrowLeftVOffset=0;				
+										opt.soloArrowLeftVOffset=0;
 										opt.soloArrowRightHalign="right";
 										opt.soloArrowRightValign="center";
 										opt.soloArrowRightHOffset=0;
 										opt.soloArrowRightVOffset=0;
 										opt.navigationArrows="solo";
 							}
-						
+
 
 
 						opt.desktop = !navigator.userAgent.match(/(iPhone|iPod|iPad|Android|BlackBerry|BB10|mobi|tablet|opera mini|nexus 7)/i);
@@ -249,7 +249,7 @@
 						if (opt.fullWidth!="on" && opt.fullScreen!="on") opt.autoHeight = "off";
 						if (opt.fullScreen=="on") opt.autoHeight = "on";
 						if (opt.fullWidth!="on" && opt.fullScreen!="on") forceFulWidth="off";
-						
+
 						if (opt.fullWidth=="on" && opt.autoHeight=="off")
 							container.css({maxHeight:opt.startheight+"px"});
 
@@ -559,8 +559,8 @@
 											if (container.outerWidth(true)!=opt.width || container.is(":hidden")) {
 													containerResized(container,opt);
 											}
-									
-										
+
+
 
 
 									});
@@ -606,8 +606,8 @@
 						}
 
 	}
-	
-	
+
+
 
 /******************************
 	-	MODULES	-
@@ -701,12 +701,12 @@
 			var nextli = container.find('>ul >li:eq('+opt.next+')');
 
 
-			
-			var arr = container.parent().find('.tparrows');				
-			if (arr.hasClass("preview2")) 
+
+			var arr = container.parent().find('.tparrows');
+			if (arr.hasClass("preview2"))
 				arr.css({width:(parseInt(arr.css('minWidth'),0))});
-			
-				
+
+
 			animateTheCaptions(nextli, opt,true);
 			//restartBannerTimer(opt,container);
 			setBulPos(container,opt);
@@ -714,7 +714,7 @@
 		}
 
 
-		
+
 
 		/*********************************
 			-	CHECK IF BROWSER IS IE	-
@@ -735,7 +735,7 @@
 		}
 
 
-		
+
 
 
 
@@ -745,7 +745,7 @@
 		var createBullets = function(container,opt) {
 			var starthidebullets = "hidebullets";
 			if (opt.hideThumbs==0) starthidebullets = "";
-			
+
 			if (opt.navigationType=="bullet"  || opt.navigationType=="both") {
 						container.parent().append('<div class="tp-bullets '+starthidebullets+' simplebullets '+opt.navigationStyle+'"></div>');
 			}
@@ -810,15 +810,15 @@
 
 						var hidden="",
 							starthidearrows = "hidearrows";
-						
+
 						if (opt.hideThumbs==0) starthidearrows = "";
-						
+
 						var arst= opt.navigationStyle;
 						if (opt.navigationArrows=="none") hidden="visibility:hidden;display:none";
 						opt.soloArrowStyle = "default"+" "+opt.navigationStyle;
-						
-						
-						
+
+
+
 
 						if (opt.navigationArrows!="none" && opt.navigationArrows!="nexttobullets") arst = opt.soloArrowStyle;
 
@@ -1090,10 +1090,10 @@
 			var loff=0;
 			if (opt.forceFullWidth=="on")
 						loff = 0-opt.container.parent().offset().left;
-			
+
 			var gridposX = 0,
 				gridposY = 0;
-				
+
 			if (opt.navigationInGrid=="on") {
 				gridposX = container.width()>opt.startwidth ? (container.width() - opt.startwidth)/2 : 0,
 				gridposY = container.height()>opt.startheight ? (container.height() - opt.startheight)/2 : 0;
@@ -1150,35 +1150,35 @@
 		/*******************************************************
 			-	HANDLING OF PREVIEWS AND CUSTOM PREVIEWS	-
 		*******************************************************/
-		
+
 		var handleSpecialPreviews = function(opt) {
-			
+
 			var container= opt.container;
-			// FILL WITH INFOS THE NAVIGATION ARROWS 			
+			// FILL WITH INFOS THE NAVIGATION ARROWS
 			opt.beforli = opt.next-1;
-			opt.comingli = opt.next+1; 
-			
-			if (opt.beforli<0) opt.beforli = opt.slideamount-1;			
-			if (opt.comingli>=opt.slideamount) opt.comingli = 0;			
-			
+			opt.comingli = opt.next+1;
+
+			if (opt.beforli<0) opt.beforli = opt.slideamount-1;
+			if (opt.comingli>=opt.slideamount) opt.comingli = 0;
+
 			var comingli = container.find('>ul:first-child >li:eq('+opt.comingli+')'),
-				beforli = container.find('>ul:first-child >li:eq('+opt.beforli+')'),			
+				beforli = container.find('>ul:first-child >li:eq('+opt.beforli+')'),
 				previmgsrc = beforli.find('.defaultimg').attr('src'),
 				nextimgsrc = comingli.find('.defaultimg').attr('src');
-				
+
 			// SAVE REFERENCES
 			if (opt.arr == undefined) {
 				opt.arr = container.parent().find('.tparrows'),
 				opt.rar = container.parent().find('.tp-rightarrow'),
-				opt.lar = container.parent().find('.tp-leftarrow'),				
+				opt.lar = container.parent().find('.tp-leftarrow'),
 				opt.raimg = opt.rar.find('.tp-arr-imgholder'),
 				opt.laimg = opt.lar.find('.tp-arr-imgholder'),
 				opt.raimg_b = opt.rar.find('.tp-arr-imgholder2'),
-				opt.laimg_b = opt.lar.find('.tp-arr-imgholder2'),				
+				opt.laimg_b = opt.lar.find('.tp-arr-imgholder2'),
 				opt.ratit = opt.rar.find('.tp-arr-titleholder'),
 				opt.latit = opt.lar.find('.tp-arr-titleholder');
 			}
-			
+
 			// READ REFERENCES
 				var arr = opt.arr,
 					rar = opt.rar,
@@ -1190,108 +1190,108 @@
 					ratit = opt.ratit,
 					latit = opt.latit;
 
-			
+
 			if (comingli.data('title') != undefined) ratit.html(comingli.data('title'));
 			if (beforli.data('title') != undefined) latit.html(beforli.data('title'));
 
 
-			if (rar.hasClass("itishovered")) {					
-					rar.width(ratit.outerWidth(true)+parseInt(rar.css('minWidth'),0));					
+			if (rar.hasClass("itishovered")) {
+					rar.width(ratit.outerWidth(true)+parseInt(rar.css('minWidth'),0));
 				}
 
-			if (lar.hasClass("itishovered")) {					
-					lar.width(latit.outerWidth(true)+parseInt(lar.css('minWidth'),0));					
+			if (lar.hasClass("itishovered")) {
+					lar.width(latit.outerWidth(true)+parseInt(lar.css('minWidth'),0));
 				}
-				
+
 			if (arr.hasClass("preview2") && !arr.hasClass("hashoveralready")) {
 
 				arr.addClass("hashoveralready");
 
 				arr.hover(function() {
 					var arr = jQuery(this),
-						th = arr.find('.tp-arr-titleholder');					
-					arr.width(th.outerWidth(true)+parseInt(arr.css('minWidth'),0));					
+						th = arr.find('.tp-arr-titleholder');
+					arr.width(th.outerWidth(true)+parseInt(arr.css('minWidth'),0));
 					arr.addClass("itishovered");
 				},function() {
 					var arr = jQuery(this),
 						th = arr.find('.tp-arr-titleholder');
-					arr.css({width:parseInt(arr.css('minWidth'),0)}); 					
-					arr.removeClass("itishovered");					
+					arr.css({width:parseInt(arr.css('minWidth'),0)});
+					arr.removeClass("itishovered");
 				});
 			}
-			
+
 			if (beforli.data('thumb')!=undefined) previmgsrc = beforli.data('thumb');
-			if (comingli.data('thumb')!=undefined) nextimgsrc = comingli.data('thumb')	
-			
-			
-			// CHANGE THE IMAGE SOURCE (AND ANIMATE IF PREVIEW4 MODE IS ON 
+			if (comingli.data('thumb')!=undefined) nextimgsrc = comingli.data('thumb')
+
+
+			// CHANGE THE IMAGE SOURCE (AND ANIMATE IF PREVIEW4 MODE IS ON
 			if (!arr.hasClass("preview4")) {
-				TweenLite.to(raimg,0.5,{autoAlpha:0,onComplete:function() {			
+				TweenLite.to(raimg,0.5,{autoAlpha:0,onComplete:function() {
 					raimg.css({'backgroundImage':'url('+nextimgsrc+')'});
-					laimg.css({'backgroundImage':'url('+previmgsrc+')'});				
+					laimg.css({'backgroundImage':'url('+previmgsrc+')'});
 				}});
 				TweenLite.to(laimg,0.5,{autoAlpha:0,onComplete:function() {
-					TweenLite.to(raimg,0.5,{autoAlpha:1,delay:0.2});	
-					TweenLite.to(laimg,0.5,{autoAlpha:1,delay:0.2});					
+					TweenLite.to(raimg,0.5,{autoAlpha:1,delay:0.2});
+					TweenLite.to(laimg,0.5,{autoAlpha:1,delay:0.2});
 				}});
 			} else {
 
 				raimg_b.css({'backgroundImage':'url('+nextimgsrc+')'});
-				laimg_b.css({'backgroundImage':'url('+previmgsrc+')'});	
-				
+				laimg_b.css({'backgroundImage':'url('+previmgsrc+')'});
+
 				TweenLite.fromTo(raimg_b,0.8,{force3D:true,x:0},{x:-raimg.width(),ease:Power3.easeOut,delay:1,onComplete:function() {
 					raimg.css({'backgroundImage':'url('+nextimgsrc+')'});
 					TweenLite.set(raimg_b,{x:0});
 				}});
 				TweenLite.fromTo(laimg_b,0.8,{force3D:true,x:0},{x:raimg.width(),ease:Power3.easeOut,delay:1,onComplete:function() {
 					laimg.css({'backgroundImage':'url('+previmgsrc+')'});
-					TweenLite.set(laimg_b,{x:0});					
+					TweenLite.set(laimg_b,{x:0});
 				}});
 
-				
-								
-				TweenLite.fromTo(raimg,0.8,{x:0},{force3D:true,x:-raimg.width(),ease:Power3.easeOut,delay:1,onComplete:function() {		
-					TweenLite.set(raimg,{x:0});			
+
+
+				TweenLite.fromTo(raimg,0.8,{x:0},{force3D:true,x:-raimg.width(),ease:Power3.easeOut,delay:1,onComplete:function() {
+					TweenLite.set(raimg,{x:0});
 				}});
-				TweenLite.fromTo(laimg,0.8,{x:0},{force3D:true,x:raimg.width(),ease:Power3.easeOut,delay:1,onComplete:function() {		
-					TweenLite.set(laimg,{x:0});			
-				}});							
+				TweenLite.fromTo(laimg,0.8,{x:0},{force3D:true,x:raimg.width(),ease:Power3.easeOut,delay:1,onComplete:function() {
+					TweenLite.set(laimg,{x:0});
+				}});
 			}
-			
+
 			// HOVER EFFECTS ARE SPECIAL ON PREVIEW4
-			if (rar.hasClass("preview4") && !rar.hasClass("hashoveralready")) {	
-			
-				rar.addClass("hashoveralready");					
+			if (rar.hasClass("preview4") && !rar.hasClass("hashoveralready")) {
+
+				rar.addClass("hashoveralready");
 				rar.hover(function() {
 					var iw = jQuery(this).find('.tp-arr-iwrapper');
-					var all = jQuery(this).find('.tp-arr-allwrapper');					
+					var all = jQuery(this).find('.tp-arr-allwrapper');
 					TweenLite.fromTo(iw,0.4,{x:iw.width()},{x:0,delay:0.3,ease:Power3.easeOut,overwrite:"all"});
 					TweenLite.to(all,0.2,{autoAlpha:1,overwrite:"all"});
 
 				},function() {
 					var iw = jQuery(this).find('.tp-arr-iwrapper');
-					var all = jQuery(this).find('.tp-arr-allwrapper');						
+					var all = jQuery(this).find('.tp-arr-allwrapper');
 					TweenLite.to(iw,0.4,{x:iw.width(),ease:Power3.easeOut,delay:0.2,overwrite:"all"});
-					TweenLite.to(all,0.2,{delay:0.6,autoAlpha:0,overwrite:"all"});					
+					TweenLite.to(all,0.2,{delay:0.6,autoAlpha:0,overwrite:"all"});
 				});
-				
-				
+
+
 				lar.hover(function() {
 					var iw = jQuery(this).find('.tp-arr-iwrapper');
-					var all = jQuery(this).find('.tp-arr-allwrapper');						
+					var all = jQuery(this).find('.tp-arr-allwrapper');
 					TweenLite.fromTo(iw,0.4,{x:(0-iw.width())},{x:0,delay:0.3,ease:Power3.easeOut,overwrite:"all"});
-					TweenLite.to(all,0.2,{autoAlpha:1,overwrite:"all"});					
+					TweenLite.to(all,0.2,{autoAlpha:1,overwrite:"all"});
 
 				},function() {
 					var iw = jQuery(this).find('.tp-arr-iwrapper');
-					var all = jQuery(this).find('.tp-arr-allwrapper');						
+					var all = jQuery(this).find('.tp-arr-allwrapper');
 					TweenLite.to(iw,0.4,{x:(0-iw.width()),ease:Power3.easeOut,delay:0.2,overwrite:"all"});
-					TweenLite.to(all,0.2,{delay:0.6,autoAlpha:0,overwrite:"all"});					
+					TweenLite.to(all,0.2,{delay:0.6,autoAlpha:0,overwrite:"all"});
 				});
-				
+
 			}
-			// END OF NAVIGATION ARROW CONTENT FILLING 
-			
+			// END OF NAVIGATION ARROW CONTENT FILLING
+
 		}
 		//////////////////////////////////////////////////////////
 		//	-	SET THE IMAGE SIZE TO FIT INTO THE CONTIANER -  //
@@ -1530,7 +1530,7 @@
 				if (isIE(8)) {
 					sh.data('kenburns',"off");
 				}
-				
+
 				if (sh.data('kenburns')=="on") {
 				   bgfit=scalestart;
 				   if (bgfit.toString().length<4)
@@ -1541,13 +1541,13 @@
 					var imgsrc=src;
 			    	src="";
 				}
-				
+
 				if (vorh == "horizontal") {
 
 					if (!visible) var off=0-opt.slotw;
 
 					for (var i=0;i<opt.slots;i++) {
-			
+
 							sh.append('<div class="slot" style="position:absolute;'+
 															'top:'+(0+fullyoff)+'px;'+
 															'left:'+(fulloff+i*opt.slotw)+'px;'+
@@ -1632,7 +1632,7 @@
 				if (img.data('curscale')!=undefined)
 					scalestart = img.data('curscale')*100;
 
-				
+
 
 				setSize(img,opt)
 				var src = img.data('src');
@@ -1951,15 +1951,15 @@
 
 				waitForLoads(nextli,function() {
 						var nextsh = nextli.find('.slotholder');
-						if (nextsh.data('kenburns')=="on") { 						
+						if (nextsh.data('kenburns')=="on") {
 							var waitfordimension = setInterval(function() {
-								var ow = nextsh.data('owidth');							
+								var ow = nextsh.data('owidth');
 								if (ow>=0) {
 									clearInterval(waitfordimension);
 									swapSlideCall(opt,defimg,container)
-								}																	
+								}
 							},10)
-						} else 
+						} else
 						 swapSlideCall(opt,defimg,container)
 				},opt);
 
@@ -2011,8 +2011,8 @@
 			opt.lastslide=opt.act;
 
 			var nextli = container.find('>ul:first-child >li:eq('+opt.next+')');
-			
-			setTimeout(function() {	
+
+			setTimeout(function() {
 				handleSpecialPreviews(opt);
 			},200);
 
@@ -2026,8 +2026,8 @@
 				container.find('.kenburnimg').remove();
 			}
 
-			
-			
+
+
 
 
 			// IF DELAY HAS BEEN SET VIA THE SLIDE, WE TAKE THE NEW VALUE, OTHER WAY THE OLD ONE...
@@ -2050,18 +2050,18 @@
 
 					container.find('>li').each(function() {
 						var li = jQuery(this);
-						if (li.index!=opt.act && li.index!=opt.next) 
+						if (li.index!=opt.act && li.index!=opt.next)
 							TweenLite.set(li,{zIndex:16});
 					});
 
 					if (opt.firststart==1)
 						TweenLite.set(actli,{autoAlpha:0});
-					TweenLite.set(actli,{zIndex:18});		
+					TweenLite.set(actli,{zIndex:18});
 					TweenLite.set(nextli,{opacity:0,zIndex:20});
 
 
 
-			
+
 			///////////////////////////
 			//	REMOVE THE CAPTIONS //
 			///////////////////////////
@@ -2070,23 +2070,23 @@
 				removetime = removeTheCaptions(actli,opt);
 
 			}
-			
+
 			if (actli.data('saveperformance')!="on") removetime = 0;
-			
+
 			setTimeout(function() {
 				//opt.cd=0;
 			    //container.trigger('nulltimer');
 			    container.trigger('restarttimer');
 				slideAnimation(container,opt,nextli,actli,actsh,nextsh);
 			},removetime)
-			
+
 		}
-		
-		
+
+
 		/******************************************
 			-	START THE LAYER ANIMATION 	-
 		*******************************************/
-		
+
 		var slideAnimation = function(container,opt,nextli,actli,actsh,nextsh) {
 
 			// IF THERE IS AN OTHER FIRST SLIDE START HAS BEED SELECTED
@@ -2131,28 +2131,28 @@
 
 
 			var comingtransition = transtext[curtransid];
-			
+
 			if (opt.ie) {
 				if (comingtransition=="boxfade") comingtransition = "boxslide";
 				if (comingtransition=="slotfade-vertical") comingtransition = "slotzoom-vertical";
 				if (comingtransition=="slotfade-horizontal") comingtransition = "slotzoom-horizontal";
 			}
-			
-			
+
+
 			var specials = 0;
-			
+
 			if (opt.parallax=="scroll" && opt.parallaxFirstGo==undefined) {
 				opt.parallaxFirstGo = true;
 				scrollParallax(container,opt);
-				setTimeout(function() { 
+				setTimeout(function() {
 					scrollParallax(container,opt);
 				},210);
-				setTimeout(function() { 
+				setTimeout(function() {
 					scrollParallax(container,opt);
 				},420);
-				
+
 			}
-			
+
 			/*if (opt.ffnn == undefined) opt.ffnn=0;
 			comingtransition=opt.ffnn;
 			opt.ffnn=opt.ffnn+1;
@@ -2240,9 +2240,9 @@
 			var STAindex = 0;
 			var indexcounter =0;
 			var STA = new Array;
-			
-			
-			if (nextsh.data('kenburns')=="on") 
+
+
+			if (nextsh.data('kenburns')=="on")
 						startKenBurn(container,opt,true,true);
 
 
@@ -2273,7 +2273,7 @@
 				if (comingtransition>premiumTransitions.length-1) comingtransition=premiumTransitions.length-1;
 				comingtransition = premiumTransitions[comingtransition];
 			}
-			
+
 			function findTransition() {
 				// FIND THE RIGHT TRANSITION PARAMETERS HERE
 				jQuery.each(transitionsArray,function(inde,trans) {
@@ -3408,10 +3408,10 @@
 		}
 
 
-		
 
-		
-		
+
+
+
 		/**************************************
 			-	GIVE FREE THE TRANSITIOSN	-
 		**************************************/
@@ -3426,10 +3426,10 @@
 					}
 					container.find('.current-sr-slide-visible').removeClass("current-sr-slide-visible");
 					nextli.addClass("current-sr-slide-visible");
-					if (opt.parallax=="scroll" || opt.parallax=="scroll+mouse" || opt.parallax=="mouse+scroll") {					
+					if (opt.parallax=="scroll" || opt.parallax=="scroll+mouse" || opt.parallax=="mouse+scroll") {
 								scrollParallax(container,opt);
-					} 
-					
+					}
+
 			}
 
 
@@ -3685,14 +3685,14 @@
 				///////////////////////
 				var animateTheCaptions = function(nextli, opt,recalled) {
 
-						
+
 						var offsetx=0;
 						var offsety=0;
-						
-						
+
+
 						var allcaptions = nextli.find('.tp-caption'),
 							allstaticcaptions = opt.container.find('.tp-static-layers').find('.tp-caption');
-							
+
 
 						jQuery.each(allstaticcaptions, function(index,staticcapt) {
 							allcaptions.push(staticcapt);
@@ -3700,13 +3700,13 @@
 
 						allcaptions.each(function(i) {
 								var internrecalled = recalled;
-							
+
 							    var staticdirection = -1;	// 1 -> In,  2-> Out  0-> Ignore  -1-> Not Static
-							    
+
 								var nextcaption=jQuery(this);
 								if (nextcaption.hasClass("tp-static-layer")) {
-								
-																		
+
+
 									// IF STATIC ITEM CURRENTLY NOT VISIBLE
 									if (!nextcaption.hasClass("tp-is-shown")) {
 										// IF ITEM SHOULD BECOME VISIBLE
@@ -3730,17 +3730,17 @@
 											staticdirection = 2;
 											//nextcaption.removeClass("tp-is-shown");
 										} else {
-											staticdirection = 0; 
+											staticdirection = 0;
 										}
-											
-									}										
+
+									}
 
 								}
-								
-								
 
-								
-								
+
+
+
+
 								offsetx = opt.width/2 - (opt.startwidth*opt.bw)/2;
 
 
@@ -3816,7 +3816,7 @@
 											nextcaption.data('autoplay',true);
 											autoplaywason = true;
 										}
-										
+
 
 
 										nextcaption.find('iframe').each(function() {
@@ -4068,12 +4068,12 @@
 
 
 												var autoplaywason = false;
-	
+
 												if (nextcaption.data('autoplayonlyfirsttime') == true || nextcaption.data('autoplayonlyfirsttime')=="true") {
 													autoplaywason = true;
 
 												}
-												
+
 												clearInterval(html5vid.data('interval'));
 												html5vid.data('interval',setInterval(function() {
 
@@ -4464,9 +4464,9 @@
 
 							TweenLite.set(nextcaption,{top:calcy,left:calcx,overwrite:"auto"});
 
-							if (staticdirection == 0) 								
+							if (staticdirection == 0)
 								internrecalled = true;
-							
+
 							if (!internrecalled) {
 
 
@@ -4605,22 +4605,22 @@
 											  endfrm.opacity = 1;
 											  endfrm.onComplete = animcompleted();
 											  endfrm.delay = mdelay;
-	
+
 											  tl.add(newtl.staggerFromTo(animobject,mspeed,frm,endfrm,elemdelay),"frame0");
-	
+
 										} else {
-	
+
 												frm.visibility = "visible";
 												frm.transformPerspective = 600;
 												if (animobject != nextcaption)
 												  tl.add(TweenLite.set(nextcaption, { opacity:1,scaleX:1,scaleY:1,rotationX:0,rotationY:0,rotationZ:0,skewX:0,skewY:0,z:0,x:0,y:0,visibility:'visible',opacity:1,delay:0,overwrite:"all"}));
-	
+
 												endfrm.visibility = "visible";
 												endfrm.delay = mdelay;
 												endfrm.onComplete = animcompleted();
 												endfrm.opacity = 1;
 												if (nextcaption.hasClass("randomrotate") && animobject != nextcaption) {
-	
+
 													for (var i=0;i<animobject.length;i++) {
 														var obj =new Object();
 														var endobj = new Object();
@@ -4630,15 +4630,15 @@
 														frm.rotation = Math.round(Math.random()*200-100);
 														frm.x = Math.round(Math.random()*200-100);
 														frm.y = Math.round(Math.random()*200-100);
-	
+
 														if (i!=0) endobj.delay = mdelay + (i*elemdelay);
-	
-	
+
+
 														tl.append(TweenLite.fromTo(animobject[i],mspeed,obj,endobj),"frame0");
 													}
-	
-	
-	
+
+
+
 												}	else
 												tl.add(newtl.staggerFromTo(animobject,mspeed,frm,endfrm,elemdelay),"frame0");
 												//tl.add(TweenLite.fromTo(nextcaption,mspeed,frm,endfrm),"frame0");
@@ -4689,7 +4689,7 @@
 						  if (internrecalled) {
 						  			killCaptionLoops(nextcaption);
 						  			callCaptionLoops(nextcaption,xbw);
-						  			
+
 							  		if (nextcaption.data('timeline') != undefined) {
 								  		var tweens = nextcaption.data('timeline').getTweensOf();
 								  		jQuery.each(tweens,function(index,tween) {
@@ -4713,12 +4713,12 @@
 								  		})
 								  	}
 						  }
-						  
+
 					})
 
 						var bt=jQuery('body').find('#'+opt.container.attr('id')).find('.tp-bannertimer');
 						bt.data('opt',opt);
-						
+
 
 
 				}
@@ -4808,11 +4808,11 @@
 
 														 lineHeight: Math.round((nc.data('lh') * opt.bh)) + "px",
 														 minWidth:(nc.data('minwidth') * opt.bw) + "px",
-														 minHeight:(nc.data('minheight') * opt.bh) + "px",														 
-														
+														 minHeight:(nc.data('minheight') * opt.bh) + "px",
+
 														/* width:(nc.data('wii') * opt.bw) + "px",
 														 height:(nc.data('hii') * opt.bh) + "px",														 */
-														 
+
 														 overwrite:"auto"
 										});
 										setTimeout(function() {
@@ -4832,13 +4832,13 @@
 											nc.css({'maxWidth':(nc.data('maxwidth') * opt.bw) + "px"});
 								}
 						}
-						
-						
+
+
 				/******************************
 					-	CAPTION LOOPS	-
 				********************************/
-				
-						
+
+
 				var callCaptionLoops = function(nextcaption,factor) {
 
 					// SOME LOOPING ANIMATION ON INTERNAL ELEMENTS
@@ -4851,10 +4851,10 @@
 												speed = el.data('speed')==undefined ? 2 : el.data('speed'),
 												origin = el.data('origin')==undefined ? "50% 50%" : el.data('origin'),
 												easing = el.data('ease')==undefined ? Power2.easeInOut : el.data('ease');
-											
+
 											startdeg = startdeg * factor;
 											enddeg = enddeg * factor;
-											
+
 											el.data('timeline').append(new TweenLite.fromTo(el,speed,{rotation:startdeg,transformOrigin:origin},{rotation:enddeg,ease:easing}));
 											el.data('timeline').append(new TweenLite.fromTo(el,speed,{rotation:enddeg,transformOrigin:origin},{rotation:startdeg,ease:easing,onComplete:function() {
 												el.data('timeline').restart();
@@ -4872,14 +4872,14 @@
 												ys = el.data('ys')==undefined ? 0 : el.data('ys');
 												xe = el.data('xe')==undefined ? 0 : el.data('xe'),
 												ye = el.data('ye')==undefined ? 0 : el.data('ye'),
-												speed = el.data('speed')==undefined ? 2 : el.data('speed'),												
+												speed = el.data('speed')==undefined ? 2 : el.data('speed'),
 												easing = el.data('ease')==undefined ? Power2.easeInOut : el.data('ease');
-												
+
 												xs = xs * factor;
 												ys = ys * factor;
 												xe = xe * factor;
 												ye = ye * factor;
-																																			
+
 											el.data('timeline').append(new TweenLite.fromTo(el,speed,{x:xs,y:ys},{x:xe,y:ye,ease:easing}));
 											el.data('timeline').append(new TweenLite.fromTo(el,speed,{x:xe,y:ye},{x:xs,y:ys,onComplete:function() {
 												el.data('timeline').restart();
@@ -4887,7 +4887,7 @@
 										}
 
 									})
-									
+
 									// SOME LOOPING ANIMATION ON INTERNAL ELEMENTS
 									nextcaption.find('.rs-pulse').each(function() {
 										var el = jQuery(this);
@@ -4895,9 +4895,9 @@
 											el.data('timeline',new TimelineLite);
 											var zoomstart = el.data('zoomstart')==undefined ? 0 : el.data('zoomstart'),
 												zoomend = el.data('zoomend')==undefined ? 0 : el.data('zoomend');
-												speed = el.data('speed')==undefined ? 2 : el.data('speed'),												
+												speed = el.data('speed')==undefined ? 2 : el.data('speed'),
 												easing = el.data('ease')==undefined ? Power2.easeInOut : el.data('ease');
-												
+
 											el.data('timeline').append(new TweenLite.fromTo(el,speed,{scale:zoomstart},{scale:zoomend,ease:easing}));
 											el.data('timeline').append(new TweenLite.fromTo(el,speed,{scale:zoomend},{scale:zoomstart,onComplete:function() {
 												el.data('timeline').restart();
@@ -4905,35 +4905,35 @@
 										}
 
 									})
-									
+
 									nextcaption.find('.rs-wave').each(function() {
 										var el = jQuery(this);
 										if (el.data('timeline')==undefined) {
 											el.data('timeline',new TimelineLite);
-												
+
 											var angle= el.data('angle')==undefined ? 10 : el.data('angle'),
 												radius = el.data('radius')==undefined ? 10 : el.data('radius'),
 												speed = el.data('speed')==undefined ? -20 : el.data('speed'),
 												origin = el.data('origin')==undefined ? -20 : el.data('origin');
-												
+
 												angle = angle*factor;
 												radius = radius * factor;
 
-											var angobj = {a:0, ang : angle, element:el, unit:radius}; 
-												
+											var angobj = {a:0, ang : angle, element:el, unit:radius};
+
 
 												el.data('timeline').append(new TweenLite.fromTo(angobj,speed,
 																			{	a:360	},
 																			{	a:0,
 																				ease:Linear.easeNone,
 																				onUpdate:function() {
-																					
+
 																					var rad = angobj.a * (Math.PI / 180);
 																		            TweenLite.to(angobj.element,0.1,{x:Math.cos(rad) * angobj.unit, y:angobj.unit * (1 - Math.sin(rad))});
 
 																				},
 																				onComplete:function() {
-																					el.data('timeline').restart();																				
+																					el.data('timeline').restart();
 																				}
 																			}
 																			));
@@ -4957,12 +4957,12 @@
 				//	REMOVE THE CAPTIONS //
 				/////////////////////////
 				var removeTheCaptions = function(actli,opt) {
-					
+
 						var removetime = 0;
 
 						var allcaptions = actli.find('.tp-caption'),
 							allstaticcaptions = opt.container.find('.tp-static-layers').find('.tp-caption');
-							
+
 
 						jQuery.each(allstaticcaptions, function(index,staticcapt) {
 							allcaptions.push(staticcapt);
@@ -4970,37 +4970,37 @@
 
 						allcaptions.each(function(i) {
 
-							
+
 							    var staticdirection = -1;	// 1 -> In,  2-> Out  0-> Ignore  -1-> Not Static
-							    
+
 								var nextcaption=jQuery(this);
 								if (nextcaption.hasClass("tp-static-layer")) {
-									
 
-									
+
+
 
 									// IF STATIC ITEM CURRENTLY NOT VISIBLE
-									if (nextcaption.hasClass("tp-is-shown")) {										
+									if (nextcaption.hasClass("tp-is-shown")) {
 
 										if ((nextcaption.data('startslide') > opt.next) ||
 											(nextcaption.data('endslide') < opt.next)) {
 											staticdirection = 2;
 											nextcaption.removeClass("tp-is-shown");
 										} else {
-											staticdirection = 0; 
-										}											
+											staticdirection = 0;
+										}
 									} else {
 										staticdirection = 2;
 									}
 
 								}
-								
-								
 
-							if (staticdirection != 0 ) {							
-							
-									killCaptionLoops(nextcaption);							
-		
+
+
+							if (staticdirection != 0 ) {
+
+									killCaptionLoops(nextcaption);
+
 									if (nextcaption.find('iframe').length>0) {
 																	// VIMEO VIDEO PAUSE
 																	try {
@@ -5017,7 +5017,7 @@
 																		clearTimeout(nextcaption.data('timerplay'));
 																	} catch(e) {}
 																}
-		
+
 									// IF HTML5 VIDEO IS EMBEDED
 									if (nextcaption.find('video').length>0) {
 													try{
@@ -5031,17 +5031,17 @@
 													}catch(e) {}
 												} // END OF VIDEO JS FUNCTIONS
 									try {
-		
+
 											//var tl = TimelineLite.exportRoot();
 											var tl = nextcaption.data('timeline');
 											var endstarts = tl.getLabelTime("frame99");
 											var curtime = tl.time();
 											if (endstarts>curtime) {
-		
+
 												// WE NEED TO STOP ALL OTHER NIMATIONS
 												var tweens = tl.getTweensOf(nextcaption);
 												jQuery.each(tweens,function(index,tw) {
-		
+
 													if (index!=0)
 														tw.pause();
 												});
@@ -5052,13 +5052,13 @@
 												} else
 													tl.progress(1,false);
 											}
-		
+
 										} catch(e) {}
-										
+
 							}
 
 						});
-						
+
 						return removetime;
 				}
 
@@ -5108,7 +5108,7 @@
 
 									mspeed = mspeed/1000;
 
-									
+
 
 									if (nextcaption.hasClass('ltr') ||
 										nextcaption.hasClass('ltl') ||
@@ -5219,7 +5219,7 @@
 
 
 								tl.addLabel(frame,mdelay);
-								
+
 								nextcaption.data('timeline',tl);
 			}
 
@@ -5383,7 +5383,7 @@
 			}
 		}
 
-		
+
 	//////////////////
 	// IS MOBILE ?? //
 	//////////////////
@@ -5391,10 +5391,10 @@
 	    var agents = ['android', 'webos', 'iphone', 'ipad', 'blackberry','Android', 'webos', ,'iPod', 'iPhone', 'iPad', 'Blackberry', 'BlackBerry'];
 		var ismobile=false;
 	    for(i in agents) {
-	
+
 		    if (navigator.userAgent.split(agents[i]).length>1) {
 	            ismobile = true;
-	
+
 	          }
 	    }
 	    return ismobile;
@@ -5417,17 +5417,17 @@
 
 				if (ow / oh > opt.width / opt.height) {
 					var factor = (opt.container.width() /ow);
-					var nheight = oh * factor;	
+					var nheight = oh * factor;
 					var hfactor = (nheight / opt.container.height())*proc;
 					proc = proc * (100/hfactor);
 					hfactor = 100;
-					proc = proc;				
-					return (proc+"% "+hfactor+"%"+" 1");														
-				} else {						
+					proc = proc;
+					return (proc+"% "+hfactor+"%"+" 1");
+				} else {
 					var factor = (opt.container.width() /ow);
-					var nheight = oh * factor;	
+					var nheight = oh * factor;
 					var hfactor = (nheight / opt.container.height())*proc;
-					return (proc+"% "+hfactor+"%");				
+					return (proc+"% "+hfactor+"%");
 				}
 			}
 
@@ -5465,7 +5465,7 @@
 			if (bgfs==undefined) bgfs=100;
 			if (bgfe==undefined) bgfe=100;
 			var obgfs = bgfs,
-				obgfe = bgfe; 
+				obgfe = bgfe;
 
 			bgfs = calculateKenBurnScales(bgfs,nextsh,opt);
 			bgfe = calculateKenBurnScales(bgfe,nextsh,opt);
@@ -5498,10 +5498,10 @@
 					nextsh.find('.kenburnimg img').css({width:imgobj.w+'%',height:imgobj.h+'%'});
 				}
 
-				
+
 
 				var kbimg = nextsh.find('.kenburnimg img');
-				
+
 
 				var imgs = calculateKenBurnImgPos(opt,bgps,bgfs,kbimg,turned),
 					imge = calculateKenBurnImgPos(opt,bgpe,bgfe,kbimg,turned);
@@ -5510,17 +5510,17 @@
 					imgs.w = obgfs/100;
 					imge.w = obgfe/100;
 				}
-				
 
-				
+
+
 				if (prepareonly) {
 
 					TweenLite.set(kbimg,{autoAlpha:0,
-											transformPerspective:1200, 
-											transformOrigin:"0% 0%", 
-											top:0,left:0, 
-											scale:imgs.w, 
-											x:imgs.x, 
+											transformPerspective:1200,
+											transformOrigin:"0% 0%",
+											top:0,left:0,
+											scale:imgs.w,
+											x:imgs.x,
 											y:imgs.y});
 					var sx = imgs.w,
 						ww = (sx * kbimg.width()) - opt.width,
@@ -5534,9 +5534,9 @@
 					if (!isIE(8)) defimg.data('curscale',(imgobj.w*sx)+"%  "+(imgobj.h*sx+"%"));
 
 					nextsh.find('.kenburnimg').remove();
-				}											
-				else					
-					defimg.data('kenburn',TweenLite.fromTo(kbimg,dur,{autoAlpha:1, force3D:true, transformOrigin:"0% 0%", top:0,left:0, scale:imgs.w, x:imgs.x, y:imgs.y},{autoAlpha:1,rotationZ:roe,ease:easeme, x:imge.x, y:imge.y,scale:imge.w,onUpdate:function() {	
+				}
+				else
+					defimg.data('kenburn',TweenLite.fromTo(kbimg,dur,{autoAlpha:1, force3D:true, transformOrigin:"0% 0%", top:0,left:0, scale:imgs.w, x:imgs.x, y:imgs.y},{autoAlpha:1,rotationZ:roe,ease:easeme, x:imge.x, y:imge.y,scale:imge.w,onUpdate:function() {
 							var sx = kbimg[0]._gsTransform.scaleX;
 							var ww = (sx * kbimg.width()) - opt.width,
 								hh = (sx * kbimg.height()) - opt.height,
@@ -5544,20 +5544,20 @@
 								ver = Math.abs((kbimg[0]._gsTransform.y / hh)*100);
 								if (hh==0) ver =0;
 								if (ww == 0) hor = 0;
-							
+
 							defimg.data('bgposition',hor+"% "+ver+"%");
 
 							if (!isIE(8)) defimg.data('currotate',getRotationDegrees(kbimg));
 							if (!isIE(8)) defimg.data('curscale',(imgobj.w*sx)+"%  "+(imgobj.h*sx+"%"));
-							//TweenLite.set(defimg,{rotation:defimg.data('currotate'), backgroundPosition:defimg.data('bgposition'), backgroundSize:defimg.data('curscale')});	
+							//TweenLite.set(defimg,{rotation:defimg.data('currotate'), backgroundPosition:defimg.data('bgposition'), backgroundSize:defimg.data('curscale')});
 					}}));
 		})
 	}
-	
+
 	/*************************************************
 		-	CALCULATE KENBURNS IMAGE POSITIONS	-
 	**************************************************/
-	
+
 	var calculateKenBurnImgPos = function(opt,bgp,bgf,img,turned) {
 			var imgobj = new Object;
 
@@ -5617,7 +5617,7 @@
 							break;
 						}
 
-			
+
 
 			return imgobj;
 		}
@@ -5639,8 +5639,8 @@
 				    } else { var angle = 0; }
 				    return (angle < 0) ? angle +=360 : angle;
 				}
-			
-			
+
+
 		/******************************
 			-	STOP KEN BURN	-
 		********************************/
@@ -5664,21 +5664,21 @@
 				var defimg = jQuery(this);
 				TweenLite.killTweensOf(defimg,false);
 				TweenLite.set(defimg,{scale:1,rotationZ:0});
-				TweenLite.killTweensOf(defimg.data('kenburn img'),false);				
+				TweenLite.killTweensOf(defimg.data('kenburn img'),false);
 				if (defimg.data('kenburn') != undefined) {
 					defimg.data('kenburn').pause();
 				}
 				if (defimg.data('currotate') != undefined && defimg.data('bgposition') !=undefined && defimg.data('curscale') != undefined)
-					TweenLite.set(defimg,{rotation:defimg.data('currotate'), backgroundPosition:defimg.data('bgposition'), backgroundSize:defimg.data('curscale')});					
+					TweenLite.set(defimg,{rotation:defimg.data('currotate'), backgroundPosition:defimg.data('bgposition'), backgroundSize:defimg.data('curscale')});
 				if (defimg!= undefined && defimg.data('kenburn img') != undefined && defimg.data('kenburn img').length>0) TweenLite.set(defimg.data('kenburn img'),{autoAlpha:0});
 
 			});
 		}
-		
+
 //// END OF KENBURNS EXTNESION
 
 
-		
+
 
 /**************************************************************************
  * Revolution Slider - PARALLAX MODULE
@@ -5702,39 +5702,39 @@
 
 
 			if (opt.parallax=="mouse" || opt.parallax=="scroll+mouse" || opt.parallax=="mouse+scroll") {
-						
+
 						container.mouseenter(function(event) {
 							var currslide = container.find('.current-sr-slide-visible');
 									var t = container.offset().top,
 										l = container.offset().left,
 										ex = (event.pageX-l),
-										ey =  (event.pageY-t);											 
+										ey =  (event.pageY-t);
 									currslide.data("enterx",ex);
-									currslide.data("entery",ey);										
+									currslide.data("entery",ey);
 
 						})
-						
+
 						container.on('mousemove.hoverdir, mouseleave.hoverdir',function(event) {
 							var currslide = container.find('.current-sr-slide-visible');
 							switch (event.type) {
-							
+
 								case "mousemove":
-										
+
 										var	t = container.offset().top,
 											l = container.offset().left,
 											mh = currslide.data("enterx"),
 											mv = currslide.data("entery"),
 											diffh = (mh - (event.pageX  - l)),
 											diffv = (mv - (event.pageY - t));
-											
+
 										currslide.find(".tp-parallax-container").each(function() {
 											var pc = jQuery(this),
 												pl = parseInt(pc.data('parallaxlevel'),0)/100,
 												offsh =	diffh * pl,
-												offsv =	diffv * pl;		
+												offsv =	diffv * pl;
 											TweenLite.to(pc,0.4,{x:offsh,y:offsv,ease:Power3.easeOut,overwrite:"all"});
 										})
-		
+
 								break;
 								case "mouseleave":
 										currslide.find(".tp-parallax-container").each(function() {
@@ -5744,14 +5744,14 @@
 								break;
 							}
 						});
-		
+
 						if (is_mobile())
 							window.ondeviceorientation = function(event) {
-							  var 	y = Math.round(event.beta  || 0),							  
+							  var 	y = Math.round(event.beta  || 0),
 							  		x = Math.round(event.gamma || 0);
-							  		
+
 							  var currslide = container.find('.current-sr-slide-visible');
-							 		
+
 
 							  if (jQuery(window).width() > jQuery(window).height()){
 							  		var xx = x;
@@ -5764,8 +5764,8 @@
 							  		curv = 180/container.height() * y;
 
 
-							  
-		
+
+
 							  currslide.find(".tp-parallax-container").each(function() {
 												var pc = jQuery(this),
 													pl = parseInt(pc.data('parallaxlevel'),0)/100,
@@ -5773,30 +5773,30 @@
 													offsv =	curv * pl;
 												TweenLite.to(pc,0.2,{x:offsh,y:offsv,ease:Power3.easeOut});
 											})
-		
+
 							  // y: -90 -> +90,  x:-180 -> +180
-		
+
 							  //jQuery('.logo-container').html("h:"+curh+"  v:"+curv);
 							  }
-			} 
+			}
 			if (opt.parallax=="scroll" || opt.parallax=="scroll+mouse" || opt.parallax=="mouse+scroll") {
 
 						jQuery(window).on('scroll',function(event) {
 							scrollParallax(container,opt);
 						});
-			} 
+			}
 		}
-		
+
 		/***************************************
 			-	SET POST OF SCROLL PARALLAX	-
 		***************************************/
 		var scrollParallax = function(container,opt) {
 			var t = container.offset().top,
-					st = jQuery(window).scrollTop(),							
+					st = jQuery(window).scrollTop(),
 					dist = t+container.height()/2,
 					mv = t+container.height()/2 - st,
 					wh = jQuery(window).height()/2,
-					diffv= wh - mv;						
+					diffv= wh - mv;
 
 			if (dist<wh) diffv = diffv - (wh-dist);
 			var currslide = container.find('.current-sr-slide-visible');
@@ -5807,14 +5807,14 @@
 				pc.data('parallaxoffset',offsv);
 				TweenLite.to(pc,0.2,{y:offsv,ease:Power3.easeOut});
 			})
-			
+
 			if (opt.parallaxBgFreeze!="on") {
 				var pl = opt.parallaxLevels[0]/100,
 					offsv =	diffv * pl;
 				TweenLite.to(container,0.2,{y:offsv,ease:Power3.easeOut});
 			}
 		}
-		
+
 		/**************************************************************************
 		 * Revolution Slider - THUMBNAIL MODULE
 		 * @version: 1.0 (03.06.2013)
@@ -5828,7 +5828,7 @@
 		var createThumbs = function(container,opt) {
 
 			var cap=container.parent();
-			
+
 
 
 			if (opt.navigationType=="thumb" || opt.navsecond=="both") {
@@ -5989,17 +5989,17 @@
 		var moveThumbSliderToPosition = function($this,pos,speed) {
 			TweenLite.to($this.find('.tp-thumbcontainer'),0.2,{left:pos,ease:Power3.easeOut,overwrite:"auto"});
 		}
-		
+
 
 
 })(jQuery);
 
 
-		
+
 /// END OF THUMBNAIL EXTNESIONS
 
 
-		
+
 
 /**************************************************************************
  * Revolution Slider - GREENSOCK SPLIT MODULE
@@ -6037,4 +6037,4 @@ function revslider_showDoubleJqueryError(sliderID) {
 		jQuery(sliderID).show().html(errorMessage);
 }
 
-		
+
