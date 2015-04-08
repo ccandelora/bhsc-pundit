@@ -13,9 +13,11 @@
     #page-top.page-wrapper
       .header-wrapper
         = render 'layouts/navigation'
-
-
+        = render 'layouts/slider'
       = yield
+      .footer-wrapper
+        = render 'layouts/footer'
+
 
     = javascript_include_tag 'application'
     = javascript_include_tag 'http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js'
