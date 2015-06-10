@@ -597,6 +597,7 @@ section {
 .gfx-mega .dropdown.gfx-mega-fw .dropdown-menu {
 	left: 0;
 	right: 0;
+	margin-top: -20px;
 }
 /* Mega Menu Elements styling*/
 /* lists */
@@ -4924,4 +4925,8 @@ ul.gallery li {
 }
 .parallax-background-summit {
 	color: White;
+}
+
+.gfx-nav .livicon {
+	margin-top: -20px;
 }

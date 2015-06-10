@@ -4745,7 +4745,7 @@ triggerOnce: true });
 /* ---------------------------------------------------
 	Google Maps
 -------------------------------------------------- */
-gfx(document).ready(function () {
+/*gfx(document).ready(function () {
 
 if (gfx('#google-map-footer').length>0) {
 	var e=new google.maps.LatLng(37.331789, -122.029620),
@@ -4803,6 +4803,7 @@ if (gfx('#google-map').length>0) {
 }
 
 });
+*/
 
 /* ---------------------------------------------------
 	Team Members
