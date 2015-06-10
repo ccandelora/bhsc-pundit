@@ -622,8 +622,8 @@ triggerOnce: true });
 gfx(document).ready(function () {
 
 if (gfx('#google-map-footer').length>0) {
-	var e=new google.maps.LatLng(37.331789, -122.029620),
-		o={zoom:17,center:new google.maps.LatLng(37.331789, -122.029620),
+	var e=new google.maps.LatLng(44.0779411, -71.2837962),
+		o={zoom:17,center:new google.maps.LatLng(44.0779411, -71.2837962),
 		mapTypeId:google.maps.MapTypeId.ROADMAP,
 		mapTypeControl:false,
 		scrollwheel:false,
@@ -637,10 +637,10 @@ if (gfx('#google-map-footer').length>0) {
 		google.maps.event.addDomListener(window,"resize",function(){var e=n.getCenter();
 		google.maps.event.trigger(n,"resize"),n.setCenter(e)});
 
-		var g='<div class="map-marker"><h4 class="color-dark xbold">AVENDOR</h4><p>United States of America</p><p>New York. 123 Fifth Avenue</p></div>',a=new google.maps.InfoWindow({content:g})
-		,t=new google.maps.MarkerImage("/assets/google-marker.png",new google.maps.Size(157,70),
-		new google.maps.Point(0,0),new google.maps.Point(75,50)),
-		i=new google.maps.LatLng(37.331789, -122.029620),
+		var g='<div class="map-marker"><h4 class="color-dark xbold">Brettl Hupfer Ski & Sports Club</h4><p>1 George Street</p><p>Bartlett, New Hampshire</p></div>',a=new google.maps.InfoWindow({content:g})
+		,t=new google.maps.MarkerImage("/assets/brettllogo_small.png",new google.maps.Size(75,75),
+		new google.maps.Point(0,0),new google.maps.Point(15,15)),
+		i=new google.maps.LatLng(44.0779411, -71.2837962),
 		p=new google.maps.Marker({position:i,map:n,icon:t,zIndex:3});
 		google.maps.event.addListener(p,"click",function(){a.open(n,p)}),
 		gfx(".gmap-button").click(function(){gfx("#google-map-footer").slideToggle(300,function(){google.maps.event.trigger(n,"resize"),n.setCenter(e)}),
@@ -650,8 +650,8 @@ if (gfx('#google-map-footer').length>0) {
 
 if (gfx('#google-map').length>0) {
 
-	var e=new google.maps.LatLng(37.331789, -122.029620),
-		o={zoom:17,center:new google.maps.LatLng(37.331789, -122.029620),
+	var e=new google.maps.LatLng(44.0779411, -71.2837962),
+		o={zoom:17,center:new google.maps.LatLng(44.0779411, -71.2837962),
 		mapTypeId:google.maps.MapTypeId.ROADMAP,
 		mapTypeControl:false,
 		scrollwheel:false,
@@ -668,7 +668,7 @@ if (gfx('#google-map').length>0) {
 		var g='<div class="map-marker"><h4 class="color-dark xbold">AVENDOR</h4><p>United States of America</p><p>New York. 123 Fifth Avenue</p></div>',a=new google.maps.InfoWindow({content:g})
 		,t=new google.maps.MarkerImage("/assets/google-marker.png",new google.maps.Size(157,70),
 		new google.maps.Point(0,0),new google.maps.Point(75,50)),
-		i=new google.maps.LatLng(37.331789, -122.029620),
+		i=new google.maps.LatLng(44.0779411, -71.2837962),
 		p=new google.maps.Marker({position:i,map:n,icon:t,zIndex:3});
 		google.maps.event.addListener(p,"click",function(){a.open(n,p)}),
 		gfx(".gmap-button").click(function(){gfx("#google-map").slideToggle(300,function(){google.maps.event.trigger(n,"resize"),n.setCenter(e)}),
@@ -677,6 +677,7 @@ if (gfx('#google-map').length>0) {
 }
 
 });
+
 
 /* ---------------------------------------------------
 	Team Members
